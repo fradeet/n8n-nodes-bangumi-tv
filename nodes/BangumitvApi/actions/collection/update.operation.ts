@@ -16,13 +16,16 @@ export const properties: INodeProperties[] = [
 						const type = this.getNodeParameter('type', 0) as number | undefined;
 						const rate = this.getNodeParameter('rate', 0) as number | undefined;
 						const comment = this.getNodeParameter('comment', 0) as string | undefined;
-						const tags = this.getNodeParameter('tags', 0) as string[] | undefined;
+						const tags = this.getNodeParameter('tags', 0) as string;
 						const privacy = this.getNodeParameter('privacy', 0) as boolean | undefined;
 						const body: Record<string, unknown> = {};
 						if (type !== undefined) body.type = type;
 						if (rate !== undefined) body.rate = rate;
 						if (comment) body.comment = comment;
-						if (tags && tags.length > 0) body.tags = tags;
+						if (tags) {
+							const tagArray = tags.split(',').map(t => t.trim()).filter(Boolean);
+							if (tagArray.length > 0) body.tags = tagArray;
+						}
 						if (privacy !== undefined) body.private = privacy;
 						if (Object.keys(body).length > 0) requestOptions.body = body;
 						return requestOptions;
@@ -58,9 +61,9 @@ export const properties: INodeProperties[] = [
 	{
 		displayName: 'Tags',
 		name: 'tags',
-		type: 'fixedCollection',
-		typeOptions: { multipleValues: true },
-		default: {},
+		type: 'string',
+		default: '',
+		description: 'Comma-separated tag names',
 		displayOptions: { show: { resource: ['collection'], operation: ['update'] } },
 	},
 	{
@@ -68,6 +71,7 @@ export const properties: INodeProperties[] = [
 		name: 'privacy',
 		type: 'boolean',
 		default: false,
+		description: 'Whether the collection is only visible to self',
 		displayOptions: { show: { resource: ['collection'], operation: ['update'] } },
 	},
 ];
