@@ -14,7 +14,13 @@ export const properties: INodeProperties[] = [
 				operation: ['getSubjectRevisions'],
 			},
 		},
-		routing: { request: { qs: { subject_id: '={{$value}}' } } },
+		routing: {
+			request: {
+				method: 'GET',
+				url: '=/v0/revisions/subjects',
+				qs: { subject_id: '={{$value}}' },
+			},
+		},
 	},
 	{
 		...limitProperty,
@@ -35,22 +41,5 @@ export const properties: INodeProperties[] = [
 			},
 		},
 		routing: { request: { qs: { offset: '={{$value}}' } } },
-	},
-	{
-		displayName: 'Resource',
-		name: 'resource',
-		type: 'hidden',
-		default: 'revision',
-		displayOptions: {
-			show: {
-				operation: ['getSubjectRevisions'],
-			},
-		},
-		routing: {
-			request: {
-				method: 'GET',
-				url: '=/v0/revisions/subjects',
-			},
-		},
 	},
 ];

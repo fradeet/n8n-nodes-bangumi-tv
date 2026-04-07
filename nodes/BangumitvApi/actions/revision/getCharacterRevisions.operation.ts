@@ -14,7 +14,13 @@ export const properties: INodeProperties[] = [
 				operation: ['getCharacterRevisions'],
 			},
 		},
-		routing: { request: { qs: { character_id: '={{$value}}' } } },
+		routing: {
+			request: {
+				method: 'GET',
+				url: '=/v0/revisions/characters',
+				qs: { character_id: '={{$value}}' },
+			},
+		},
 	},
 	{
 		...limitProperty,
@@ -35,22 +41,5 @@ export const properties: INodeProperties[] = [
 			},
 		},
 		routing: { request: { qs: { offset: '={{$value}}' } } },
-	},
-	{
-		displayName: 'Resource',
-		name: 'resource',
-		type: 'hidden',
-		default: 'revision',
-		displayOptions: {
-			show: {
-				operation: ['getCharacterRevisions'],
-			},
-		},
-		routing: {
-			request: {
-				method: 'GET',
-				url: '=/v0/revisions/characters',
-			},
-		},
 	},
 ];
