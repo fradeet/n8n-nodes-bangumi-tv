@@ -1,5 +1,6 @@
 import type { INodeProperties } from 'n8n-workflow';
 import { description as subjectDescription } from './subject/Subject.resource';
+import { description as episodeDescription } from './episode/Episode.resource';
 
 // Will be populated as resources are implemented
 export const properties: INodeProperties[] = [
@@ -21,4 +22,5 @@ export const properties: INodeProperties[] = [
 		default: 'subject',
 	},
 	...subjectDescription,
+	...episodeDescription,
 ];

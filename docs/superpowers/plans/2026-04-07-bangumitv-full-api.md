@@ -93,7 +93,7 @@ routing: {
 rm -rf nodes/BangumitvApi/resources/
 ```
 
-- [ ] **Step 2: Create `common.descriptions.ts`**
+- [x] **Step 2: Create `common.descriptions.ts`**
 
 ```typescript
 // nodes/BangumitvApi/actions/common.descriptions.ts
@@ -179,7 +179,7 @@ export const searchSortOptions = [
 ];
 ```
 
-- [ ] **Step 3: Update `BangumitvApi.node.ts`**
+- [x] **Step 3: Update `BangumitvApi.node.ts`**
 
 ```typescript
 // nodes/BangumitvApi/BangumitvApi.node.ts
@@ -214,7 +214,7 @@ export class BangumitvApi implements INodeType {
 }
 ```
 
-- [ ] **Step 4: Update `BangumitvApi.node.json`**
+- [x] **Step 4: Update `BangumitvApi.node.json`**
 
 ```json
 {
@@ -237,7 +237,7 @@ export class BangumitvApi implements INodeType {
 }
 ```
 
-- [ ] **Step 5: Create placeholder `descriptions.ts`**
+- [x] **Step 5: Create placeholder `descriptions.ts`**
 
 ```typescript
 // nodes/BangumitvApi/actions/descriptions.ts
@@ -265,7 +265,7 @@ export const properties: INodeProperties[] = [
 ];
 ```
 
-- [ ] **Step 6: Build and verify**
+- [x] **Step 6: Build and verify**
 
 ```bash
 pnpm run build
@@ -273,7 +273,7 @@ pnpm run build
 
 Expected: Build succeeds with no errors.
 
-- [ ] **Step 7: Commit**
+- [x] **Step 7: Commit**
 
 ```bash
 git add -A && git commit -m "refactor: clean up old resources, add common properties and placeholder structure"
@@ -294,7 +294,7 @@ git add -A && git commit -m "refactor: clean up old resources, add common proper
 - Create: `nodes/BangumitvApi/actions/subject/getRelations.operation.ts`
 - Create: `nodes/BangumitvApi/actions/subject/Subject.resource.ts`
 
-- [ ] **Step 1: Create `getCalendar.operation.ts`**
+- [x] **Step 1: Create `getCalendar.operation.ts`**
 
 ```typescript
 import type { INodeProperties } from 'n8n-workflow';
@@ -321,7 +321,7 @@ export const properties: INodeProperties[] = [
 ];
 ```
 
-- [ ] **Step 2: Create `search.operation.ts`**
+- [x] **Step 2: Create `search.operation.ts`**
 
 ```typescript
 import type { INodeProperties, IExecuteSingleFunctions, IRequestOptions } from 'n8n-workflow';
@@ -417,7 +417,7 @@ export const properties: INodeProperties[] = [
 ];
 ```
 
-- [ ] **Step 3: Create `getAll.operation.ts`**
+- [x] **Step 3: Create `getAll.operation.ts`**
 
 ```typescript
 import type { INodeProperties } from 'n8n-workflow';
@@ -509,7 +509,7 @@ export const properties: INodeProperties[] = [
 ];
 ```
 
-- [ ] **Step 4: Create `get.operation.ts`**
+- [x] **Step 4: Create `get.operation.ts`**
 
 ```typescript
 import type { INodeProperties } from 'n8n-workflow';
@@ -536,7 +536,7 @@ export const properties: INodeProperties[] = [
 ];
 ```
 
-- [ ] **Step 5: Create `getImage.operation.ts`**
+- [x] **Step 5: Create `getImage.operation.ts`**
 
 ```typescript
 import type { INodeProperties } from 'n8n-workflow';
@@ -563,7 +563,7 @@ export const properties: INodeProperties[] = [
 ];
 ```
 
-- [ ] **Step 6: Create `getPersons.operation.ts`**
+- [x] **Step 6: Create `getPersons.operation.ts`**
 
 ```typescript
 import type { INodeProperties } from 'n8n-workflow';
@@ -590,7 +590,7 @@ export const properties: INodeProperties[] = [
 ];
 ```
 
-- [ ] **Step 7: Create `getCharacters.operation.ts`**
+- [x] **Step 7: Create `getCharacters.operation.ts`**
 
 ```typescript
 import type { INodeProperties } from 'n8n-workflow';
@@ -617,7 +617,7 @@ export const properties: INodeProperties[] = [
 ];
 ```
 
-- [ ] **Step 8: Create `getRelations.operation.ts`**
+- [x] **Step 8: Create `getRelations.operation.ts`**
 
 ```typescript
 import type { INodeProperties } from 'n8n-workflow';
@@ -644,7 +644,7 @@ export const properties: INodeProperties[] = [
 ];
 ```
 
-- [ ] **Step 9: Create `Subject.resource.ts`**
+- [x] **Step 9: Create `Subject.resource.ts`**
 
 ```typescript
 import type { INodeProperties } from 'n8n-workflow';
@@ -691,7 +691,7 @@ export const description: INodeProperties[] = [
 ];
 ```
 
-- [ ] **Step 10: Update `descriptions.ts` to include Subject**
+- [x] **Step 10: Update `descriptions.ts` to include Subject**
 
 In `descriptions.ts`, add the import and spread:
 ```typescript
@@ -699,13 +699,13 @@ import { description as subjectDescription } from './subject/Subject.resource';
 ```
 And add `...subjectDescription,` after the resource selector.
 
-- [ ] **Step 11: Build and verify**
+- [x] **Step 11: Build and verify**
 
 ```bash
 pnpm run build
 ```
 
-- [ ] **Step 12: Commit**
+- [x] **Step 12: Commit**
 
 ```bash
 git add -A && git commit -m "feat: add Subject resource with 8 operations"
@@ -720,7 +720,7 @@ git add -A && git commit -m "feat: add Subject resource with 8 operations"
 - Create: `nodes/BangumitvApi/actions/episode/get.operation.ts`
 - Create: `nodes/BangumitvApi/actions/episode/Episode.resource.ts`
 
-- [ ] **Step 1: Create `getAll.operation.ts`**
+- [x] **Step 1: Create `getAll.operation.ts`**
 
 ```typescript
 import type { INodeProperties } from 'n8n-workflow';
