@@ -40,7 +40,7 @@ export const properties: INodeProperties[] = [
 		name: 'nsfw',
 		type: 'boolean',
 		default: false,
-		description: 'Include NSFW results (requires permission)',
+		description: 'Whether to include NSFW results (requires permission)',
 		displayOptions: {
 			show: {
 				resource: ['character'],
