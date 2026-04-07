@@ -12,7 +12,7 @@ export const properties: INodeProperties[] = [
 			request: {
 				method: 'GET',
 				url: '=/v0/episodes',
-				qs: { subject_id: '={{$value}' },
+				qs: { subject_id: '={{$value}}' },
 			},
 		},
 		displayOptions: {
@@ -35,7 +35,7 @@ export const properties: INodeProperties[] = [
 				operation: ['getAll'],
 			},
 		},
-		routing: { request: { qs: { type: '={{$value}' } } },
+		routing: { request: { qs: { type: '={{$value}}' } } },
 	},
 	{
 		...limitPropertyLarge,
