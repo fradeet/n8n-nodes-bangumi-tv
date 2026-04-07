@@ -1,4 +1,4 @@
-import type { ICredentialType, INodeProperties } from 'n8n-workflow';
+import type { ICredentialType, INodeProperties, ICredentialTestRequest } from 'n8n-workflow';
 
 export class BangumitvApiOAuth2Api implements ICredentialType {
 	name = 'bangumitvApiOAuth2Api';
@@ -7,8 +7,18 @@ export class BangumitvApiOAuth2Api implements ICredentialType {
 
 	displayName = 'Bangumitv Api OAuth2 API';
 
-	// Link to your community node's README
-	documentationUrl = 'https://github.com/org/-bangumitv-api?tab=readme-ov-file#credentials';
+	icon = { light: 'file:../nodes/BangumitvApi/bangumitvApi.svg', dark: 'file:../nodes/BangumitvApi/bangumitvApi.dark.svg' } as const;
+
+	documentationUrl = 'https://github.com/bangumi/api/blob/master/docs-raw/How-to-Auth.md';
+
+	// Test credential validity by querying token status
+	test: ICredentialTestRequest = {
+		request: {
+			baseURL: 'https://bgm.tv',
+			url: '/oauth/token_status',
+			method: 'POST',
+		},
+	};
 
 	properties: INodeProperties[] = [
 		{
@@ -21,25 +31,25 @@ export class BangumitvApiOAuth2Api implements ICredentialType {
 			displayName: 'Authorization URL',
 			name: 'authUrl',
 			type: 'hidden',
-			default: 'https://api.example.com/oauth/authorize',
+			default: 'https://bgm.tv/oauth/authorize',
 		},
 		{
 			displayName: 'Access Token URL',
 			name: 'accessTokenUrl',
 			type: 'hidden',
-			default: 'https://api.example.com/oauth/token',
+			default: 'https://bgm.tv/oauth/access_token',
+		},
+		{
+			displayName: 'Scope',
+			name: 'scope',
+			type: 'hidden',
+			default: '',
 		},
 		{
 			displayName: 'Auth URI Query Parameters',
 			name: 'authQueryParameters',
 			type: 'hidden',
 			default: '',
-		},
-		{
-			displayName: 'Scope',
-			name: 'scope',
-			type: 'hidden',
-			default: 'users:read users:write companies:read',
 		},
 		{
 			displayName: 'Authentication',
