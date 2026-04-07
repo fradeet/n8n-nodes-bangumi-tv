@@ -44,10 +44,14 @@ BangumiTV API 文档明确指出 scope 功能"尚未实现"，因此：
 
 ### 2.3 Token 有效期
 - Access Token 有效期：604800 秒（7 天）
+- Authorization Code 有效期：60 秒（需快速完成交换）
 - 支持 Refresh Token 自动刷新
 - n8n OAuth2 框架自动处理 token 刷新
 
-### 2.4 认证头格式
+### 2.5 Token 状态查询
+BangumiTV 提供 `POST https://bgm.tv/oauth/token_status` 端点用于查询当前授权状态，可用作凭证有效性测试。
+
+### 2.6 认证头格式
 ```
 Authorization: Bearer {access_token}
 ```
@@ -65,6 +69,15 @@ export class BangumitvApiOAuth2Api implements ICredentialType {
 	extends = ['oAuth2Api'];
 	displayName = 'Bangumitv Api OAuth2 API';
 	documentationUrl = 'https://github.com/bangumi/api/blob/master/docs-raw/How-to-Auth.md';
+
+	// Test credential validity by querying token status
+	test: ICredentialTestRequest = {
+		request: {
+			baseURL: 'https://bgm.tv',
+			url: '/oauth/token_status',
+			method: 'POST',
+		},
+	};
 
 	properties: INodeProperties[] = [
 		{
@@ -108,17 +121,18 @@ export class BangumitvApiOAuth2Api implements ICredentialType {
 ```
 
 **关键变更**:
+- `documentationUrl`: `https://github.com/org/-bangumitv-api?tab=readme-ov-file#credentials` → `https://github.com/bangumi/api/blob/master/docs-raw/How-to-Auth.md`
 - `authUrl`: `https://api.example.com/oauth/authorize` → `https://bgm.tv/oauth/authorize`
 - `accessTokenUrl`: `https://api.example.com/oauth/token` → `https://bgm.tv/oauth/access_token`
 - `scope`: `'users:read users:write companies:read'` → `''`（空字符串）
+- 新增 `test` 请求配置：使用 `/oauth/token_status` 端点验证凭证有效性
 
 ### 3.2 配置说明
 
 **保留的默认配置**（继承自 n8n oAuth2Api）:
 - Grant Type: `authorizationCode`
-- Authentication: `header`
+- Authentication: `header`（Bearer token 通过 Authorization 请求头发送）
 - 自动 token 刷新
-- PKCE 支持（如果 BangumiTV 启用）
 
 **用户需要提供的凭证**:
 - Client ID（App ID）
@@ -213,3 +227,4 @@ cp -r dist/credentials/* ~/.n8n/credentials/
 | 日期 | 版本 | 变更内容 | 作者 |
 |------|------|----------|------|
 | 2026-04-07 | 1.0 | 初始设计 | Claude Code |
+| 2026-04-07 | 1.1 | 审查修订：补充 documentationUrl 变更、新增 test 配置、移除 PKCE 描述、补充 token_status 端点和 code 有效期 | Claude Code |
