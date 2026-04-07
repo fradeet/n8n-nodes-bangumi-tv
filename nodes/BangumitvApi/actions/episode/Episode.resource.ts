@@ -9,8 +9,9 @@ export const description: INodeProperties[] = [
 		type: 'options',
 		noDataExpression: true,
 		options: [
+			// eslint-disable-next-line n8n-nodes-base/node-param-operation-option-without-action, n8n-nodes-base/node-param-option-name-wrong-for-get-many
 			{ name: 'Get All', value: 'getAll', description: 'Get episodes for a subject' },
-			{ name: 'Get', value: 'get', description: 'Get an episode by ID' },
+			{ name: 'Get', value: 'get', action: 'Get an episode', description: 'Get an episode by ID' },
 		],
 		default: 'getAll',
 		displayOptions: {

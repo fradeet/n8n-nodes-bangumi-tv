@@ -45,7 +45,7 @@ export const properties: INodeProperties[] = [
 				operation: ['getAll'],
 			},
 		},
-		routing: { request: { qs: { limit: '={{$value}' } } },
+		routing: { request: { qs: { limit: '={{$value}}' } } },
 	},
 	{
 		...offsetProperty,
@@ -55,6 +55,6 @@ export const properties: INodeProperties[] = [
 				operation: ['getAll'],
 			},
 		},
-		routing: { request: { qs: { offset: '={{$value}' } } },
+		routing: { request: { qs: { offset: '={{$value}}' } } },
 	},
 ];
