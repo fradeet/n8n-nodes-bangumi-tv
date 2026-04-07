@@ -5,6 +5,7 @@ import { description as characterDescription } from './character/Character.resou
 import { description as personDescription } from './person/Person.resource';
 import { description as userDescription } from './user/User.resource';
 import { description as collectionDescription } from './collection/Collection.resource';
+import { description as revisionDescription } from './revision/Revision.resource';
 
 // Will be populated as resources are implemented
 export const properties: INodeProperties[] = [
@@ -32,4 +33,5 @@ export const properties: INodeProperties[] = [
 	...personDescription,
 	...userDescription,
 	...collectionDescription,
+	...revisionDescription,
 ];
