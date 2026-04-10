@@ -18,12 +18,42 @@ export const description: INodeProperties[] = [
 			{ name: 'Get', value: 'get', action: 'Get a subject', description: 'Get a subject by ID' },
 			// eslint-disable-next-line n8n-nodes-base/node-param-operation-option-without-action, n8n-nodes-base/node-param-option-name-wrong-for-get-many
 			{ name: 'Get All', value: 'getAll', description: 'Browse subjects' },
-			{ name: 'Get Calendar', value: 'getCalendar', action: 'Get calendar', description: 'Get daily broadcast schedule' },
-			{ name: 'Get Characters', value: 'getCharacters', action: 'Get characters', description: 'Get related characters' },
-			{ name: 'Get Image', value: 'getImage', action: 'Get image', description: 'Get subject image' },
-			{ name: 'Get Persons', value: 'getPersons', action: 'Get persons', description: 'Get related persons' },
-			{ name: 'Get Relations', value: 'getRelations', action: 'Get relations', description: 'Get related subjects' },
-			{ name: 'Search', value: 'search', action: 'Search', description: 'Search subjects by keyword' },
+			{
+				name: 'Get Calendar',
+				value: 'getCalendar',
+				action: 'Get calendar',
+				description: 'Get daily broadcast schedule',
+			},
+			{
+				name: 'Get Characters',
+				value: 'getCharacters',
+				action: 'Get characters',
+				description: 'Get related characters',
+			},
+			{
+				name: 'Get Image',
+				value: 'getImage',
+				action: 'Get image',
+				description: 'Get subject image',
+			},
+			{
+				name: 'Get Persons',
+				value: 'getPersons',
+				action: 'Get persons',
+				description: 'Get related persons',
+			},
+			{
+				name: 'Get Relations',
+				value: 'getRelations',
+				action: 'Get relations',
+				description: 'Get related subjects',
+			},
+			{
+				name: 'Search',
+				value: 'search',
+				action: 'Search',
+				description: 'Search subjects by keyword',
+			},
 		],
 		default: 'getAll',
 		displayOptions: {

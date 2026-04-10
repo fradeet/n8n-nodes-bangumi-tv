@@ -1,5 +1,10 @@
 import type { INodeProperties } from 'n8n-workflow';
-import { limitProperty, offsetProperty, subjectTypeOptions, subjectSortOptions } from '../common.descriptions';
+import {
+	limitProperty,
+	offsetProperty,
+	subjectTypeOptions,
+	subjectSortOptions,
+} from '../common.descriptions';
 
 export const properties: INodeProperties[] = [
 	{

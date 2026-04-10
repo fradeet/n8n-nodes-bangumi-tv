@@ -11,8 +11,18 @@ export const description: INodeProperties[] = [
 		noDataExpression: true,
 		options: [
 			{ name: 'Get', value: 'get', action: 'Get a user', description: 'Get user by username' },
-			{ name: 'Get Myself', value: 'getMyself', action: 'Get current user', description: 'Get current authenticated user' },
-			{ name: 'Get Avatar', value: 'getAvatar', action: 'Get user avatar', description: 'Get user avatar' },
+			{
+				name: 'Get Myself',
+				value: 'getMyself',
+				action: 'Get current user',
+				description: 'Get current authenticated user',
+			},
+			{
+				name: 'Get Avatar',
+				value: 'getAvatar',
+				action: 'Get user avatar',
+				description: 'Get user avatar',
+			},
 		],
 		default: 'get',
 		displayOptions: { show: { resource: ['user'] } },

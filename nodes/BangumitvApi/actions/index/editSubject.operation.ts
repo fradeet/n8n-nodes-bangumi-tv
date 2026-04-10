@@ -8,7 +8,10 @@ export const properties: INodeProperties[] = [
 		required: true,
 		default: '',
 		routing: {
-			request: { method: 'PUT', url: '=/v0/indices/{{$value}}/subjects/{{$parameter["subjectId"]}}' },
+			request: {
+				method: 'PUT',
+				url: '=/v0/indices/{{$value}}/subjects/{{$parameter["subjectId"]}}',
+			},
 			send: {
 				preSend: [
 					async function (this: IExecuteSingleFunctions, requestOptions: IHttpRequestOptions) {

@@ -23,7 +23,10 @@ export const properties: INodeProperties[] = [
 						if (rate !== undefined) body.rate = rate;
 						if (comment) body.comment = comment;
 						if (tags) {
-							const tagArray = tags.split(',').map(t => t.trim()).filter(Boolean);
+							const tagArray = tags
+								.split(',')
+								.map((t) => t.trim())
+								.filter(Boolean);
 							if (tagArray.length > 0) body.tags = tagArray;
 						}
 						if (privacy !== undefined) body.private = privacy;
