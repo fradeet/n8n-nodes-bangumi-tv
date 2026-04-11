@@ -7,7 +7,7 @@ export class BangumitvApiOAuth2Api implements ICredentialType {
 
 	displayName = 'Bangumi.tv OAuth2 API';
 
-	icon = { light: 'file:../nodes/BangumitvApi/bangumitvApi.svg', dark: 'file:../nodes/BangumitvApi/bangumitvApi.dark.svg' } as const;
+	icon = 'file:../nodes/BangumitvApi/bangumiLogo.svg' as const;
 
 	documentationUrl = 'https://github.com/bangumi/api/blob/master/docs-raw/How-to-Auth.md';
 

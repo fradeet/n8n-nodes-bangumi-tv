@@ -35,8 +35,7 @@ Implement all 50 public Bangumi API operations into a single n8n declarative nod
 nodes/BangumitvApi/
 ├── BangumitvApi.node.ts              # Main node description
 ├── BangumitvApi.node.json            # Node metadata
-├── bangumitvApi.svg                  # Light icon
-├── bangumitvApi.dark.svg             # Dark icon
+├── bangumiLogo.svg                  # Icon
 └── actions/
     ├── descriptions.ts               # Properties aggregation center
     ├── common.descriptions.ts        # Shared properties (pagination, etc.)
@@ -215,7 +214,7 @@ export class BangumitvApi implements INodeType {
   description: INodeTypeDescription = {
     displayName: 'Bangumi',
     name: 'bangumitvApi',
-    icon: { light: 'file:bangumitvApi.svg', dark: 'file:bangumitvApi.dark.svg' },
+    icon: 'file:bangumiLogo.svg',
     group: ['transform'],
     version: 1,
     subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
