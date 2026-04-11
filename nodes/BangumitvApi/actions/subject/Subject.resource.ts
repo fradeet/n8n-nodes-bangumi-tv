@@ -34,7 +34,12 @@ export const description: INodeProperties[] = [
 				action: 'Get image',
 				description: 'Get subject image',
 			},
-			{ name: 'Get Many', value: 'getAll', description: 'Browse subjects', action: 'Get many subjects',},
+			{
+				name: 'Get Many',
+				value: 'getAll',
+				description: 'Browse subjects',
+				action: 'Get many subjects',
+			},
 			{
 				name: 'Get Persons',
 				value: 'getPersons',

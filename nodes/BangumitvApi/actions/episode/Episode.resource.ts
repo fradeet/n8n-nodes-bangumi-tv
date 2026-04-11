@@ -9,7 +9,12 @@ export const description: INodeProperties[] = [
 		type: 'options',
 		noDataExpression: true,
 		options: [
-			{ name: 'Get Many', value: 'getAll', description: 'Get episodes for a subject', action: 'Get many an episode',},
+			{
+				name: 'Get Many',
+				value: 'getAll',
+				description: 'Get episodes for a subject',
+				action: 'Get many an episode',
+			},
 			{ name: 'Get', value: 'get', action: 'Get an episode', description: 'Get an episode by ID' },
 		],
 		default: 'getAll',
