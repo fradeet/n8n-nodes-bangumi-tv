@@ -16,8 +16,6 @@ export const description: INodeProperties[] = [
 		noDataExpression: true,
 		options: [
 			{ name: 'Get', value: 'get', action: 'Get a subject', description: 'Get a subject by ID' },
-			// eslint-disable-next-line n8n-nodes-base/node-param-operation-option-without-action, n8n-nodes-base/node-param-option-name-wrong-for-get-many
-			{ name: 'Get All', value: 'getAll', description: 'Browse subjects' },
 			{
 				name: 'Get Calendar',
 				value: 'getCalendar',
@@ -36,6 +34,7 @@ export const description: INodeProperties[] = [
 				action: 'Get image',
 				description: 'Get subject image',
 			},
+			{ name: 'Get Many', value: 'getAll', description: 'Browse subjects', action: 'Get many subjects',},
 			{
 				name: 'Get Persons',
 				value: 'getPersons',
