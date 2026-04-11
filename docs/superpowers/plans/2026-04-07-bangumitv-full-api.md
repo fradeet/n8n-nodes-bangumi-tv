@@ -206,7 +206,7 @@ export class BangumitvApi implements INodeType {
 			baseURL: 'https://api.bgm.tv',
 			headers: {
 				Accept: 'application/json',
-				'User-Agent': 'n8n-bangumitv-api/0.1.0',
+				'User-Agent': 'n8n-bangumi-tv/0.1.0',
 			},
 		},
 		properties,
@@ -218,7 +218,7 @@ export class BangumitvApi implements INodeType {
 
 ```json
 {
-	"node": "n8n-nodes-bangumitv-api",
+	"node": "n8n-nodes-bangumi-tv",
 	"nodeVersion": "1.0",
 	"codexVersion": "1.0",
 	"categories": ["Development", "Developer Tools"],

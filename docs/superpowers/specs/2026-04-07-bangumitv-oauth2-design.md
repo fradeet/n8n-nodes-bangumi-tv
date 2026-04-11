@@ -67,7 +67,7 @@ Authorization: Bearer {access_token}
 export class BangumitvApiOAuth2Api implements ICredentialType {
 	name = 'bangumitvApiOAuth2Api';
 	extends = ['oAuth2Api'];
-	displayName = 'Bangumitv Api OAuth2 API';
+	displayName = 'Bangumi.tv OAuth2 API';
 	documentationUrl = 'https://github.com/bangumi/api/blob/master/docs-raw/How-to-Auth.md';
 
 	// Test credential validity by querying token status

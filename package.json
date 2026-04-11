@@ -1,14 +1,14 @@
 {
-  "name": "n8n-nodes-bangumi-tv-api",
+  "name": "n8n-nodes-bangumi-tv",
   "version": "0.1.0",
-  "description": "n8n community node for Bangumitv API integration",
+  "description": "n8n community node for Bangumi.tv integration",
   "license": "MIT",
-  "homepage": "https://github.com/fradeet/n8n-nodes-bangumi-tv-api",
+  "homepage": "https://github.com/fradeet/n8n-nodes-bangumi-tv",
   "keywords": ["n8n-community-node-package"],
   "author": { "name": "fradeet", "email": "fradeet.ye@outlook.com" },
   "repository": {
     "type": "git",
-    "url": "https://github.com/fradeet/n8n-nodes-bangumi-tv-api.git"
+    "url": "https://github.com/fradeet/n8n-nodes-bangumi-tv.git"
   },
   "scripts": {
     "build": "n8n-node build",

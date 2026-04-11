@@ -1,4 +1,4 @@
-# n8n-nodes-bangumitv-api
+# n8n-nodes-bangumi-tv
 
 This is an n8n community node. It lets you use _app/service name_ in your n8n workflows.
 

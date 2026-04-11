@@ -5,7 +5,7 @@ export class BangumitvApiOAuth2Api implements ICredentialType {
 
 	extends = ['oAuth2Api'];
 
-	displayName = 'Bangumitv Api OAuth2 API';
+	displayName = 'Bangumi.tv OAuth2 API';
 
 	icon = { light: 'file:../nodes/BangumitvApi/bangumitvApi.svg', dark: 'file:../nodes/BangumitvApi/bangumitvApi.dark.svg' } as const;
 
