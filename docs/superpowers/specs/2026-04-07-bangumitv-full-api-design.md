@@ -256,7 +256,7 @@ export class BangumitvApi implements INodeType {
 
 | Operation | HTTP | Endpoint | Auth | Notes |
 |-----------|------|----------|------|-------|
-| getAll | GET | `/v0/episodes` | Y | QS: subject_id, type, limit, offset |
+| getAll | GET | `/v0/episodes` | Y | QS: subject_id, type, limit (max 200), offset |
 | get | GET | `/v0/episodes/{episode_id}` | Y | Path: episode_id |
 
 ### 3.3 Character (7 operations)
@@ -299,7 +299,7 @@ export class BangumitvApi implements INodeType {
 | get | GET | `/v0/users/-/collections/{subject_id}` | Y | |
 | create | POST | `/v0/users/-/collections/{subject_id}` | Y | JSON body: type, rate, comment, etc. |
 | update | PATCH | `/v0/users/-/collections/{subject_id}` | Y | JSON body: partial update |
-| getEpisodes | GET | `/v0/users/-/collections/{subject_id}/episodes` | Y | QS: type, limit, offset |
+| getEpisodes | GET | `/v0/users/-/collections/{subject_id}/episodes` | Y | QS: type, limit (max 1000), offset |
 | updateEpisodes | PATCH | `/v0/users/-/collections/{subject_id}/episodes` | Y | JSON body: episode_id, type arrays |
 | getEpisode | GET | `/v0/users/-/collections/-/episodes/{episode_id}` | Y | |
 | updateEpisode | PUT | `/v0/users/-/collections/-/episodes/{episode_id}` | Y | JSON body: type (integer) |
@@ -339,10 +339,18 @@ export class BangumitvApi implements INodeType {
 
 ### 4.1 Pagination (`common.descriptions.ts`)
 
-- `limit`: number, default 20, max 50
+#### Standard Limit Property:
+- `limitProperty`: number, default 50, max 50
 - `offset`: number, default 0
 
-Used by: getAll, search, getCollections, getEpisodes, all revision list operations, getIndexSubjects
+#### Episode-Specific Limit Properties:
+- `episodeLimitProperty`: number, default 50, max 200 (for `/v0/episodes`)
+- `episodeCollectionLimitProperty`: number, default 50, max 1000 (for `/v0/users/-/collections/{subject_id}/episodes`)
+
+Used by:
+- `limitProperty`: getAll, search, getCollections, all revision list operations, getIndexSubjects
+- `episodeLimitProperty`: episode.getAll
+- `episodeCollectionLimitProperty`: collection.getEpisodes
 
 ### 4.2 Subject Type Options
 

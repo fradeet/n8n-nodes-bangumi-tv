@@ -1,5 +1,5 @@
 import type { INodeProperties } from 'n8n-workflow';
-import { limitPropertyLarge, offsetProperty, episodeTypeOptions } from '../common.descriptions';
+import { episodeLimitProperty, offsetProperty, episodeTypeOptions } from '../common.descriptions';
 
 export const properties: INodeProperties[] = [
 	{
@@ -38,7 +38,7 @@ export const properties: INodeProperties[] = [
 		routing: { request: { qs: { type: '={{$value}}' } } },
 	},
 	{
-		...limitPropertyLarge,
+		...episodeLimitProperty,
 		displayOptions: {
 			show: {
 				resource: ['episode'],

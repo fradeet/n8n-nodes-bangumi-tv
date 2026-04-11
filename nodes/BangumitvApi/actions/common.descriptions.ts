@@ -4,8 +4,7 @@ export const limitProperty: INodeProperties = {
 	displayName: 'Limit',
 	name: 'limit',
 	type: 'number',
-	// eslint-disable-next-line n8n-nodes-base/node-param-default-wrong-for-limit
-	default: 30,
+	default: 50,
 	typeOptions: {
 		minValue: 1,
 		maxValue: 50,
@@ -13,12 +12,23 @@ export const limitProperty: INodeProperties = {
 	description: 'Max number of results to return',
 };
 
-export const limitPropertyLarge: INodeProperties = {
+export const episodeLimitProperty: INodeProperties = {
 	displayName: 'Limit',
 	name: 'limit',
 	type: 'number',
-	// eslint-disable-next-line n8n-nodes-base/node-param-default-wrong-for-limit
-	default: 100,
+	default: 50,
+	typeOptions: {
+		minValue: 1,
+		maxValue: 200,
+	},
+	description: 'Max number of results to return',
+};
+
+export const episodeCollectionLimitProperty: INodeProperties = {
+	displayName: 'Limit',
+	name: 'limit',
+	type: 'number',
+	default: 50,
 	typeOptions: {
 		minValue: 1,
 		maxValue: 1000,
