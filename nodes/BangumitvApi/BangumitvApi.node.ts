@@ -7,7 +7,8 @@ export class BangumitvApi implements INodeType {
 		name: 'bangumitvApi',
 		icon: 'file:bangumiLogo.svg',
 		group: ['transform'],
-		version: 1,
+		version: [1],
+		defaultVersion: 1,
 		subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
 		description: 'Interact with the Bangumi.tv API',
 		defaults: {
@@ -24,7 +25,7 @@ export class BangumitvApi implements INodeType {
 				'Content-Type': 'application/json',
 				'User-Agent': 'n8n-bangumi-tv/0.1.0',
 			},
-    },
+		},
 		properties,
 	};
 }
