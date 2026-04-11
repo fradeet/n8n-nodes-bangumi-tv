@@ -3,7 +3,7 @@ import { properties } from './actions/descriptions';
 
 export class BangumitvApi implements INodeType {
 	description: INodeTypeDescription = {
-		displayName: 'Bangumi',
+		displayName: 'Bangumi.tv',
 		name: 'bangumitvApi',
 		icon: { light: 'file:bangumitvApi.svg', dark: 'file:bangumitvApi.dark.svg' },
 		group: ['transform'],
