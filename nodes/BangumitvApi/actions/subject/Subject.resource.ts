@@ -1,7 +1,7 @@
 import type { INodeProperties } from 'n8n-workflow';
 import { properties as getCalendarProps } from './getCalendar.operation';
 import { properties as searchProps } from './search.operation';
-import { properties as getAllProps } from './getAll.operation';
+import { properties as getManyProps } from './getMany.operation';
 import { properties as getProps } from './get.operation';
 import { properties as getImageProps } from './getImage.operation';
 import { properties as getPersonsProps } from './getPersons.operation';
@@ -15,51 +15,56 @@ export const description: INodeProperties[] = [
 		type: 'options',
 		noDataExpression: true,
 		options: [
-			{ name: 'Get', value: 'get', action: 'Get a subject', description: 'Get a subject by ID' },
+			{
+				name: 'Get',
+				value: 'get',
+				action: 'Get subject',
+				description: 'Retrieve a subject by ID',
+			},
 			{
 				name: 'Get Calendar',
 				value: 'getCalendar',
 				action: 'Get calendar',
-				description: 'Get daily broadcast schedule',
-			},
-			{
-				name: 'Get Characters',
-				value: 'getCharacters',
-				action: 'Get characters',
-				description: 'Get related characters',
+				description: 'Retrieve daily broadcast schedule for subjects',
 			},
 			{
 				name: 'Get Image',
 				value: 'getImage',
-				action: 'Get image',
-				description: 'Get subject image',
+				action: 'Get subject image',
+				description: 'Retrieve subject image',
 			},
 			{
 				name: 'Get Many',
-				value: 'getAll',
-				description: 'Browse subjects',
+				value: 'getMany',
 				action: 'Get many subjects',
+				description: 'Browse subjects with filters',
 			},
 			{
-				name: 'Get Persons',
+				name: 'Get Many Characters',
+				value: 'getCharacters',
+				action: 'Get related characters for subject',
+				description: 'Retrieve related characters for a subject',
+			},
+			{
+				name: 'Get Many Persons',
 				value: 'getPersons',
-				action: 'Get persons',
-				description: 'Get related persons',
+				action: 'Get related persons for subject',
+				description: 'Retrieve related persons for a subject',
 			},
 			{
-				name: 'Get Relations',
+				name: 'Get Many Related Subjects',
 				value: 'getRelations',
-				action: 'Get relations',
-				description: 'Get related subjects',
+				action: 'Get related subjects for subject',
+				description: 'Retrieve related subjects for a subject',
 			},
 			{
 				name: 'Search',
 				value: 'search',
-				action: 'Search',
+				action: 'Search subjects',
 				description: 'Search subjects by keyword',
 			},
 		],
-		default: 'getAll',
+		default: 'getMany',
 		displayOptions: {
 			show: {
 				resource: ['subject'],
@@ -68,7 +73,7 @@ export const description: INodeProperties[] = [
 	},
 	...getCalendarProps,
 	...searchProps,
-	...getAllProps,
+	...getManyProps,
 	...getProps,
 	...getImageProps,
 	...getPersonsProps,
