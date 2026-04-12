@@ -1,5 +1,5 @@
 import type { INodeProperties } from 'n8n-workflow';
-import { properties as getAllProps } from './getAll.operation';
+import { properties as getManyProps } from './getMany.operation';
 import { properties as getProps } from './get.operation';
 
 export const description: INodeProperties[] = [
@@ -10,20 +10,25 @@ export const description: INodeProperties[] = [
 		noDataExpression: true,
 		options: [
 			{
-				name: 'Get Many',
-				value: 'getAll',
-				description: 'Get episodes for a subject',
-				action: 'Get many an episode',
+				name: 'Get',
+				value: 'get',
+				action: 'Get episode',
+				description: 'Retrieve an episode by ID',
 			},
-			{ name: 'Get', value: 'get', action: 'Get an episode', description: 'Get an episode by ID' },
+			{
+				name: 'Get Many',
+				value: 'getMany',
+				action: 'Get many episodes',
+				description: 'Retrieve episodes for a subject',
+			},
 		],
-		default: 'getAll',
+		default: 'getMany',
 		displayOptions: {
 			show: {
 				resource: ['episode'],
 			},
 		},
 	},
-	...getAllProps,
+	...getManyProps,
 	...getProps,
 ];
