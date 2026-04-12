@@ -8,6 +8,6 @@ export const properties: INodeProperties[] = [
 		required: true,
 		default: '',
 		routing: { request: { method: 'POST', url: '=/v0/indices/{{$value}}/collect' } },
-		displayOptions: { show: { resource: ['index'], operation: ['collect'] } },
+		displayOptions: { show: { resource: ['me'], operation: ['createIndexCollect'] } },
 	},
 ];

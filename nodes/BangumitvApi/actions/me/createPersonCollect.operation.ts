@@ -9,12 +9,12 @@ export const properties: INodeProperties[] = [
 		default: '',
 		routing: {
 			request: {
-				method: 'DELETE',
+				method: 'POST',
 				url: '=/v0/persons/{{$value}}/collect',
 			},
 		},
 		displayOptions: {
-			show: { resource: ['person'], operation: ['uncollect'] },
+			show: { resource: ['me'], operation: ['createPersonCollect'] },
 		},
 	},
 ];

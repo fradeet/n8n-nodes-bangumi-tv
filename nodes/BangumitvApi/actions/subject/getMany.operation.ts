@@ -24,7 +24,7 @@ export const properties: INodeProperties[] = [
 		displayOptions: {
 			show: {
 				resource: ['subject'],
-				operation: ['getAll'],
+				operation: ['getMany'],
 			},
 		},
 	},
@@ -38,7 +38,7 @@ export const properties: INodeProperties[] = [
 		displayOptions: {
 			show: {
 				resource: ['subject'],
-				operation: ['getAll'],
+				operation: ['getMany'],
 			},
 		},
 		routing: { request: { qs: { sort: '={{$value}}' } } },
@@ -52,7 +52,7 @@ export const properties: INodeProperties[] = [
 		displayOptions: {
 			show: {
 				resource: ['subject'],
-				operation: ['getAll'],
+				operation: ['getMany'],
 			},
 		},
 		routing: { request: { qs: { year: '={{$value}}' } } },
@@ -66,7 +66,7 @@ export const properties: INodeProperties[] = [
 		displayOptions: {
 			show: {
 				resource: ['subject'],
-				operation: ['getAll'],
+				operation: ['getMany'],
 			},
 		},
 		routing: { request: { qs: { month: '={{$value}}' } } },
@@ -76,7 +76,7 @@ export const properties: INodeProperties[] = [
 		displayOptions: {
 			show: {
 				resource: ['subject'],
-				operation: ['getAll'],
+				operation: ['getMany'],
 			},
 		},
 		routing: { request: { qs: { limit: '={{$value}}' } } },
@@ -86,7 +86,7 @@ export const properties: INodeProperties[] = [
 		displayOptions: {
 			show: {
 				resource: ['subject'],
-				operation: ['getAll'],
+				operation: ['getMany'],
 			},
 		},
 		routing: { request: { qs: { offset: '={{$value}}' } } },

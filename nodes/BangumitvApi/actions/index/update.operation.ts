@@ -23,20 +23,20 @@ export const properties: INodeProperties[] = [
 				],
 			},
 		},
-		displayOptions: { show: { resource: ['index'], operation: ['edit'] } },
+		displayOptions: { show: { resource: ['index'], operation: ['update'] } },
 	},
 	{
 		displayName: 'Title',
 		name: 'title',
 		type: 'string',
 		default: '',
-		displayOptions: { show: { resource: ['index'], operation: ['edit'] } },
+		displayOptions: { show: { resource: ['index'], operation: ['update'] } },
 	},
 	{
 		displayName: 'Description',
 		name: 'description',
 		type: 'string',
 		default: '',
-		displayOptions: { show: { resource: ['index'], operation: ['edit'] } },
+		displayOptions: { show: { resource: ['index'], operation: ['update'] } },
 	},
 ];

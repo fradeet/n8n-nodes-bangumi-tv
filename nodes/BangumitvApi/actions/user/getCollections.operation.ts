@@ -19,7 +19,7 @@ export const properties: INodeProperties[] = [
 				url: '=/v0/users/{{$value}}/collections',
 			},
 		},
-		displayOptions: { show: { resource: ['collection'], operation: ['getCollections'] } },
+		displayOptions: { show: { resource: ['user'], operation: ['getCollections'] } },
 	},
 	{
 		displayName: 'Subject Type',
@@ -28,7 +28,7 @@ export const properties: INodeProperties[] = [
 		options: [{ name: 'All', value: '' }, ...subjectTypeOptions],
 		default: '',
 		description: 'Filter by subject type',
-		displayOptions: { show: { resource: ['collection'], operation: ['getCollections'] } },
+		displayOptions: { show: { resource: ['user'], operation: ['getCollections'] } },
 		routing: { request: { qs: { subject_type: '={{$value}}' } } },
 	},
 	{
@@ -38,17 +38,17 @@ export const properties: INodeProperties[] = [
 		options: [{ name: 'All', value: '' }, ...collectionTypeOptions],
 		default: '',
 		description: 'Filter by collection type',
-		displayOptions: { show: { resource: ['collection'], operation: ['getCollections'] } },
+		displayOptions: { show: { resource: ['user'], operation: ['getCollections'] } },
 		routing: { request: { qs: { type: '={{$value}}' } } },
 	},
 	{
 		...limitProperty,
-		displayOptions: { show: { resource: ['collection'], operation: ['getCollections'] } },
+		displayOptions: { show: { resource: ['user'], operation: ['getCollections'] } },
 		routing: { request: { qs: { limit: '={{$value}}' } } },
 	},
 	{
 		...offsetProperty,
-		displayOptions: { show: { resource: ['collection'], operation: ['getCollections'] } },
+		displayOptions: { show: { resource: ['user'], operation: ['getCollections'] } },
 		routing: { request: { qs: { offset: '={{$value}}' } } },
 	},
 ];

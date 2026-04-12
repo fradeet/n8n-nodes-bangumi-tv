@@ -13,7 +13,7 @@ export const properties: INodeProperties[] = [
 				url: '=/v0/indices/{{$value}}/subjects/{{$parameter["subjectId"]}}',
 			},
 		},
-		displayOptions: { show: { resource: ['index'], operation: ['removeSubject'] } },
+		displayOptions: { show: { resource: ['index'], operation: ['deleteSubject'] } },
 	},
 	{
 		displayName: 'Subject ID',
@@ -21,6 +21,6 @@ export const properties: INodeProperties[] = [
 		type: 'string',
 		required: true,
 		default: '',
-		displayOptions: { show: { resource: ['index'], operation: ['removeSubject'] } },
+		displayOptions: { show: { resource: ['index'], operation: ['deleteSubject'] } },
 	},
 ];

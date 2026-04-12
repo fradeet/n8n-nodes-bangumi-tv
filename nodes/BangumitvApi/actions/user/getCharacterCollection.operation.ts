@@ -13,7 +13,7 @@ export const properties: INodeProperties[] = [
 				url: '=/v0/users/{{$value}}/collections/-/characters/{{$parameter["characterId"]}}',
 			},
 		},
-		displayOptions: { show: { resource: ['collection'], operation: ['getCharacterCollection'] } },
+		displayOptions: { show: { resource: ['user'], operation: ['getCharacterCollection'] } },
 	},
 	{
 		displayName: 'Character ID',
@@ -21,6 +21,6 @@ export const properties: INodeProperties[] = [
 		type: 'string',
 		required: true,
 		default: '',
-		displayOptions: { show: { resource: ['collection'], operation: ['getCharacterCollection'] } },
+		displayOptions: { show: { resource: ['user'], operation: ['getCharacterCollection'] } },
 	},
 ];

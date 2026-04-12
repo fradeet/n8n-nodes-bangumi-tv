@@ -26,7 +26,7 @@ export const properties: INodeProperties[] = [
 				],
 			},
 		},
-		displayOptions: { show: { resource: ['index'], operation: ['editSubject'] } },
+		displayOptions: { show: { resource: ['index'], operation: ['updateSubject'] } },
 	},
 	{
 		displayName: 'Subject ID',
@@ -34,20 +34,20 @@ export const properties: INodeProperties[] = [
 		type: 'string',
 		required: true,
 		default: '',
-		displayOptions: { show: { resource: ['index'], operation: ['editSubject'] } },
+		displayOptions: { show: { resource: ['index'], operation: ['updateSubject'] } },
 	},
 	{
 		displayName: 'Sort',
 		name: 'sort',
 		type: 'number',
 		default: 0,
-		displayOptions: { show: { resource: ['index'], operation: ['editSubject'] } },
+		displayOptions: { show: { resource: ['index'], operation: ['updateSubject'] } },
 	},
 	{
 		displayName: 'Comment',
 		name: 'comment',
 		type: 'string',
 		default: '',
-		displayOptions: { show: { resource: ['index'], operation: ['editSubject'] } },
+		displayOptions: { show: { resource: ['index'], operation: ['updateSubject'] } },
 	},
 ];

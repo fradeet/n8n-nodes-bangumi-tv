@@ -29,14 +29,17 @@ Implement all 50 public Bangumi API operations into a single n8n declarative nod
 - Credentials: `bangumitvApiOAuth2Api` (OAuth2, required)
 - All operations routed via `routing` property on each parameter
 
+> **⚠️ Superseded by [Naming Normalization Design](./2026-04-12-naming-normalization-design.md)**
+> Directory structure restructured: `collection/` removed, `me/` added, operation counts per resource changed.
+> See new spec §2.2 for the current directory structure.
+
 ### 2.2 Directory Structure
 
 ```
 nodes/BangumitvApi/
 ├── BangumitvApi.node.ts              # Main node description
 ├── BangumitvApi.node.json            # Node metadata
-├── bangumitvApi.svg                  # Light icon
-├── bangumitvApi.dark.svg             # Dark icon
+├── bangumiLogo.svg                  # Icon
 └── actions/
     ├── descriptions.ts               # Properties aggregation center
     ├── common.descriptions.ts        # Shared properties (pagination, etc.)
@@ -215,7 +218,7 @@ export class BangumitvApi implements INodeType {
   description: INodeTypeDescription = {
     displayName: 'Bangumi',
     name: 'bangumitvApi',
-    icon: { light: 'file:bangumitvApi.svg', dark: 'file:bangumitvApi.dark.svg' },
+    icon: 'file:bangumiLogo.svg',
     group: ['transform'],
     version: 1,
     subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
@@ -283,6 +286,10 @@ export class BangumitvApi implements INodeType {
 | collect | POST | `/v0/persons/{person_id}/collect` | Y | |
 | uncollect | DELETE | `/v0/persons/{person_id}/collect` | Y | |
 
+> **⚠️ Superseded by [Naming Normalization Design](./2026-04-12-naming-normalization-design.md)**
+> User resource expanded to 7 operations (+5 from Collection, −1 getMyself moved to Me).
+> See new spec §3.5 for the current User operation mapping.
+
 ### 3.5 User (3 operations)
 
 | Operation | HTTP | Endpoint | Auth | Notes |
@@ -290,6 +297,9 @@ export class BangumitvApi implements INodeType {
 | get | GET | `/v0/users/{username}` | N | |
 | getMyself | GET | `/v0/me` | Y | |
 | getAvatar | GET | `/v0/users/{username}/avatar` | N | |
+
+> **⚠️ Superseded by [Naming Normalization Design](./2026-04-12-naming-normalization-design.md)**
+> Collection resource removed entirely. Operations redistributed: current-user ops → Me resource (§3.6), any-user ops → User resource (§3.5).
 
 ### 3.6 Collection (12 operations)
 
@@ -380,6 +390,10 @@ Existing OAuth2 credential (`BangumitvApiOAuth2Api`) is reused as-is. All operat
 - Remove `company` imports from main node
 - Update `BangumitvApi.node.json` with correct metadata
 - Update `package.json` display name to "Bangumi"
+
+> **⚠️ Superseded by [Naming Normalization Design](./2026-04-12-naming-normalization-design.md)**
+> All naming conventions in this section have been replaced: `getAll` → `getMany`, Title Case operation names, consistent CRUD vocabulary, `collection` resource removed.
+> See new spec §1.3 (Rules) and §3 (Operation Mapping) for current conventions.
 
 ## 7. Naming Conventions
 

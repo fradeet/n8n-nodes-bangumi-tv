@@ -8,6 +8,6 @@ export const properties: INodeProperties[] = [
 		required: true,
 		default: '',
 		routing: { request: { method: 'DELETE', url: '=/v0/indices/{{$value}}/collect' } },
-		displayOptions: { show: { resource: ['index'], operation: ['uncollect'] } },
+		displayOptions: { show: { resource: ['me'], operation: ['deleteIndexCollect'] } },
 	},
 ];

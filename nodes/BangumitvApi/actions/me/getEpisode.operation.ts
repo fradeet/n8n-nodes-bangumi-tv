@@ -10,6 +10,6 @@ export const properties: INodeProperties[] = [
 		routing: {
 			request: { method: 'GET', url: '=/v0/users/-/collections/-/episodes/{{$value}}' },
 		},
-		displayOptions: { show: { resource: ['collection'], operation: ['getEpisode'] } },
+		displayOptions: { show: { resource: ['me'], operation: ['getEpisode'] } },
 	},
 ];

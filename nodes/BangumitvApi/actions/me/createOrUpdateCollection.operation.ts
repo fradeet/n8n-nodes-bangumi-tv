@@ -9,7 +9,7 @@ export const properties: INodeProperties[] = [
 		required: true,
 		default: '',
 		routing: {
-			request: { method: 'PATCH', url: '=/v0/users/-/collections/{{$value}}' },
+			request: { method: 'POST', url: '=/v0/users/-/collections/{{$value}}' },
 			send: {
 				preSend: [
 					async function (this: IExecuteSingleFunctions, requestOptions: IHttpRequestOptions) {
@@ -36,7 +36,7 @@ export const properties: INodeProperties[] = [
 				],
 			},
 		},
-		displayOptions: { show: { resource: ['collection'], operation: ['update'] } },
+		displayOptions: { show: { resource: ['me'], operation: ['createOrUpdateCollection'] } },
 	},
 	{
 		displayName: 'Type',
@@ -44,7 +44,8 @@ export const properties: INodeProperties[] = [
 		type: 'options',
 		options: collectionTypeOptions,
 		default: 1,
-		displayOptions: { show: { resource: ['collection'], operation: ['update'] } },
+		description: 'Collection type',
+		displayOptions: { show: { resource: ['me'], operation: ['createOrUpdateCollection'] } },
 	},
 	{
 		displayName: 'Rate',
@@ -52,14 +53,16 @@ export const properties: INodeProperties[] = [
 		type: 'number',
 		default: 0,
 		typeOptions: { minValue: 0, maxValue: 10 },
-		displayOptions: { show: { resource: ['collection'], operation: ['update'] } },
+		description: 'Rating (0-10)',
+		displayOptions: { show: { resource: ['me'], operation: ['createOrUpdateCollection'] } },
 	},
 	{
 		displayName: 'Comment',
 		name: 'comment',
 		type: 'string',
 		default: '',
-		displayOptions: { show: { resource: ['collection'], operation: ['update'] } },
+		description: 'Comment/review',
+		displayOptions: { show: { resource: ['me'], operation: ['createOrUpdateCollection'] } },
 	},
 	{
 		displayName: 'Tags',
@@ -67,7 +70,7 @@ export const properties: INodeProperties[] = [
 		type: 'string',
 		default: '',
 		description: 'Comma-separated tag names',
-		displayOptions: { show: { resource: ['collection'], operation: ['update'] } },
+		displayOptions: { show: { resource: ['me'], operation: ['createOrUpdateCollection'] } },
 	},
 	{
 		displayName: 'Private',
@@ -75,6 +78,6 @@ export const properties: INodeProperties[] = [
 		type: 'boolean',
 		default: false,
 		description: 'Whether the collection is only visible to self',
-		displayOptions: { show: { resource: ['collection'], operation: ['update'] } },
+		displayOptions: { show: { resource: ['me'], operation: ['createOrUpdateCollection'] } },
 	},
 ];

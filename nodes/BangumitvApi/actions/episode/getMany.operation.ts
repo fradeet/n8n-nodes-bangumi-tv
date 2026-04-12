@@ -18,7 +18,7 @@ export const properties: INodeProperties[] = [
 		displayOptions: {
 			show: {
 				resource: ['episode'],
-				operation: ['getAll'],
+				operation: ['getMany'],
 			},
 		},
 	},
@@ -32,7 +32,7 @@ export const properties: INodeProperties[] = [
 		displayOptions: {
 			show: {
 				resource: ['episode'],
-				operation: ['getAll'],
+				operation: ['getMany'],
 			},
 		},
 		routing: { request: { qs: { type: '={{$value}}' } } },
@@ -42,7 +42,7 @@ export const properties: INodeProperties[] = [
 		displayOptions: {
 			show: {
 				resource: ['episode'],
-				operation: ['getAll'],
+				operation: ['getMany'],
 			},
 		},
 		routing: { request: { qs: { limit: '={{$value}}' } } },
@@ -52,7 +52,7 @@ export const properties: INodeProperties[] = [
 		displayOptions: {
 			show: {
 				resource: ['episode'],
-				operation: ['getAll'],
+				operation: ['getMany'],
 			},
 		},
 		routing: { request: { qs: { offset: '={{$value}}' } } },

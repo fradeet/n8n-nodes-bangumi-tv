@@ -5,11 +5,12 @@ export class BangumitvApi implements INodeType {
 	description: INodeTypeDescription = {
 		displayName: 'Bangumi.tv',
 		name: 'bangumitvApi',
-		icon: { light: 'file:bangumitvApi.svg', dark: 'file:bangumitvApi.dark.svg' },
+		icon: 'file:bangumiLogo.svg',
 		group: ['transform'],
-		version: 1,
+		version: [1],
+		defaultVersion: 1,
 		subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
-		description: 'Interact with the Bangumi API',
+		description: 'Interact with the Bangumi.tv API',
 		defaults: {
 			name: 'Bangumi',
 		},

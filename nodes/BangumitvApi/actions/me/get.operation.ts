@@ -2,8 +2,8 @@ import type { INodeProperties } from 'n8n-workflow';
 
 export const properties: INodeProperties[] = [
 	{
-		displayName: 'Get Myself',
-		name: 'getMyself',
+		displayName: 'Get',
+		name: 'get',
 		type: 'hidden',
 		default: '',
 		routing: {
@@ -14,8 +14,8 @@ export const properties: INodeProperties[] = [
 		},
 		displayOptions: {
 			show: {
-				resource: ['user'],
-				operation: ['getMyself'],
+				resource: ['me'],
+				operation: ['get'],
 			},
 		},
 	},

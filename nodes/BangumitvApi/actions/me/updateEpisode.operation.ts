@@ -20,7 +20,7 @@ export const properties: INodeProperties[] = [
 				],
 			},
 		},
-		displayOptions: { show: { resource: ['collection'], operation: ['updateEpisode'] } },
+		displayOptions: { show: { resource: ['me'], operation: ['updateEpisode'] } },
 	},
 	{
 		displayName: 'Type',
@@ -30,6 +30,6 @@ export const properties: INodeProperties[] = [
 		required: true,
 		default: 1,
 		description: 'Episode collection type',
-		displayOptions: { show: { resource: ['collection'], operation: ['updateEpisode'] } },
+		displayOptions: { show: { resource: ['me'], operation: ['updateEpisode'] } },
 	},
 ];
