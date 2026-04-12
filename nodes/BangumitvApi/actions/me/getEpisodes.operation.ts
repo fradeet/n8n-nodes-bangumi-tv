@@ -1,5 +1,9 @@
 import type { INodeProperties } from 'n8n-workflow';
-import { episodeCollectionLimitProperty, offsetProperty, episodeTypeOptions } from '../common.descriptions';
+import {
+	episodeCollectionLimitProperty,
+	offsetProperty,
+	episodeTypeOptions,
+} from '../common.descriptions';
 
 export const properties: INodeProperties[] = [
 	{
