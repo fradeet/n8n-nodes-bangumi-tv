@@ -4,8 +4,6 @@ import { properties as searchProps } from './search.operation';
 import { properties as getSubjectsProps } from './getSubjects.operation';
 import { properties as getCharactersProps } from './getCharacters.operation';
 import { properties as getImageProps } from './getImage.operation';
-import { properties as collectProps } from './collect.operation';
-import { properties as uncollectProps } from './uncollect.operation';
 
 export const description: INodeProperties[] = [
 	{
@@ -15,36 +13,34 @@ export const description: INodeProperties[] = [
 		noDataExpression: true,
 		options: [
 			{
-				name: 'Collect',
-				value: 'collect',
-				action: 'Collect person',
-				description: 'Collect person',
-			},
-			{ name: 'Get', value: 'get', action: 'Get a person', description: 'Get person detail' },
-			{
-				name: 'Get Characters',
-				value: 'getCharacters',
-				action: 'Get characters',
-				description: 'Get person related characters',
+				name: 'Get',
+				value: 'get',
+				action: 'Get person',
+				description: 'Retrieve a person by ID',
 			},
 			{
 				name: 'Get Image',
 				value: 'getImage',
-				action: 'Get image',
-				description: 'Get person image',
+				action: 'Get person image',
+				description: 'Retrieve person image',
 			},
 			{
-				name: 'Get Subjects',
+				name: 'Get Many Characters',
+				value: 'getCharacters',
+				action: 'Get related characters for person',
+				description: 'Retrieve related characters for a person',
+			},
+			{
+				name: 'Get Many Subjects',
 				value: 'getSubjects',
-				action: 'Get subjects',
-				description: 'Get person related subjects',
+				action: 'Get related subjects for person',
+				description: 'Retrieve related subjects for a person',
 			},
-			{ name: 'Search', value: 'search', action: 'Search persons', description: 'Search persons' },
 			{
-				name: 'Uncollect',
-				value: 'uncollect',
-				action: 'Uncollect person',
-				description: 'Uncollect person',
+				name: 'Search',
+				value: 'search',
+				action: 'Search persons',
+				description: 'Search persons by keyword',
 			},
 		],
 		default: 'get',
@@ -55,6 +51,4 @@ export const description: INodeProperties[] = [
 	...getSubjectsProps,
 	...getCharactersProps,
 	...getImageProps,
-	...collectProps,
-	...uncollectProps,
 ];
