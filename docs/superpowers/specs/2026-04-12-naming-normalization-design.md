@@ -147,19 +147,19 @@ Collection directory deleted entirely.
 | Name | value | action | description |
 |------|-------|--------|-------------|
 | Get | `get` | Get current user | Retrieve current authenticated user profile |
-| Get Collection | `getCollection` | Get subject collection for current user | Retrieve subject collection status for current user |
-| Create or Update Collection | `createOrUpdateCollection` | Create or update subject collection for current user | Create a new subject collection or update existing one |
-| Update Collection | `updateCollection` | Update subject collection for current user | Update subject collection status for current user |
-| Get Many Episodes | `getEpisodes` | Get many episode collections for current user | Retrieve episode collection statuses for a subject |
-| Update Episodes | `updateEpisodes` | Update episode collections for current user | Update episode collection statuses for a subject |
-| Get Episode | `getEpisode` | Get episode collection for current user | Retrieve single episode collection status |
-| Update Episode | `updateEpisode` | Update episode collection for current user | Update single episode collection status |
-| Create Character Collection | `createCharacterCollect` | Create character collection for current user | Add character to current user's collection |
-| Delete Character Collection | `deleteCharacterCollect` | Delete character collection for current user | Remove character from current user's collection |
-| Create Person Collection | `createPersonCollect` | Create person collection for current user | Add person to current user's collection |
-| Delete Person Collection | `deletePersonCollect` | Delete person collection for current user | Remove person from current user's collection |
-| Create Index Collection | `createIndexCollect` | Create index collection for current user | Add index to current user's collection |
-| Delete Index Collection | `deleteIndexCollect` | Delete index collection for current user | Remove index from current user's collection |
+| Get Collection | `getCollection` | Get subject collection | Retrieve subject collection status for current user |
+| Create or Update Collection | `createOrUpdateCollection` | Create or update subject collection | Create a new subject collection or update existing one |
+| Update Collection | `updateCollection` | Update subject collection | Update subject collection status for current user |
+| Get Many Episodes | `getEpisodes` | Get many episode collections | Retrieve episode collection statuses for a subject |
+| Update Episodes | `updateEpisodes` | Update episode collections | Update episode collection statuses for a subject |
+| Get Episode | `getEpisode` | Get episode collection | Retrieve single episode collection status |
+| Update Episode | `updateEpisode` | Update episode collection | Update single episode collection status |
+| Create Character Collection | `createCharacterCollect` | Create character collection | Add character to current user's collection |
+| Delete Character Collection | `deleteCharacterCollect` | Delete character collection | Remove character from current user's collection |
+| Create Person Collection | `createPersonCollect` | Create person collection | Add person to current user's collection |
+| Delete Person Collection | `deletePersonCollect` | Delete person collection | Remove person from current user's collection |
+| Create Index Collection | `createIndexCollect` | Create index collection | Add index to current user's collection |
+| Delete Index Collection | `deleteIndexCollect` | Delete index collection | Remove index from current user's collection |
 
 **API endpoint mapping:**
 
