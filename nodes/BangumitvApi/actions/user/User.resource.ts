@@ -27,10 +27,10 @@ export const description: INodeProperties[] = [
 				description: 'Retrieve user avatar by username',
 			},
 			{
-				name: 'Get Many Collections',
-				value: 'getCollections',
-				action: 'Get many user collections',
-				description: 'Retrieve subject collections for user',
+				name: 'Get Character Collection',
+				value: 'getCharacterCollection',
+				action: 'Get user character collection',
+				description: 'Retrieve single character collection for user',
 			},
 			{
 				name: 'Get Many Character Collections',
@@ -39,10 +39,10 @@ export const description: INodeProperties[] = [
 				description: 'Retrieve character collections for user',
 			},
 			{
-				name: 'Get Character Collection',
-				value: 'getCharacterCollection',
-				action: 'Get user character collection',
-				description: 'Retrieve single character collection for user',
+				name: 'Get Many Collections',
+				value: 'getCollections',
+				action: 'Get many user collections',
+				description: 'Retrieve subject collections for user',
 			},
 			{
 				name: 'Get Many Person Collections',
