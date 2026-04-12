@@ -30,12 +30,19 @@ Reorganize resources so that **operations follow their object entity**, followin
 5. `Me` resource retains only `Get` (current user profile)
 6. `User` resource retains only `Get` and `Get Avatar`
 
+### 1.4 Naming Disambiguation
+
+The word "Collection" appears in both a resource name and operation names. Use **alternative wording in descriptions** to help disambiguate:
+
+- **Collection resource** descriptions: use wording like "View a user's collected subjects", "View a user's collected characters"
+- **Subject/Episode "Collection Status"** descriptions: use wording like "Retrieve your watch status and rating", "Update your viewing progress"
+
 ## 2. Resource Architecture (After Reorganization)
 
 ```
 ┌──────────────────────────────────────────────────────┐
 │ Resource: Collection (NEW — public read-only)        │
-│  Get Many Collections                                │
+│  Get Many                                            │
 │  Get Character Collection                            │
 │  Get Many Character Collections                      │
 │  Get Person Collection                               │
@@ -56,7 +63,7 @@ Reorganize resources so that **operations follow their object entity**, followin
 │  Get Collection Status                               │
 │  Get Many Collection Statuses                        │
 │  Update Collection Status                            │
-│  Update Many Collection Statuses                     │
+│  Update Collection Statuses                          │
 ├──────────────────────────────────────────────────────┤
 │ Resource: Character (5 → 7)                          │
 │  + Collect, Uncollect                                │
@@ -85,7 +92,7 @@ Public, read-only resource for viewing any user's collections.
 
 | Operation Name | value | action | API Endpoint | Migrated From |
 |---|---|---|---|---|
-| Get Many Collections | `getMany` | Get many collections | `GET /v0/users/{username}/collections` | User |
+| Get Many | `getMany` | Get many collections | `GET /v0/users/{username}/collections` | User |
 | Get Character Collection | `getCharacterCollection` | Get character collection | `GET /v0/users/{username}/collections/-/characters/{characterId}` | User |
 | Get Many Character Collections | `getCharacterCollections` | Get many character collections | `GET /v0/users/{username}/collections/-/characters` | User |
 | Get Person Collection | `getPersonCollection` | Get person collection | `GET /v0/users/{username}/collections/-/persons/{personId}` | User |
@@ -110,7 +117,7 @@ Episode collection (watch progress) management for current user (auth required).
 | Get Collection Status | `getCollection` | Get episode collection status | `GET /v0/users/-/collections/-/episodes/{episodeId}` | Me |
 | Get Many Collection Statuses | `getCollections` | Get many episode collection statuses | `GET /v0/users/-/collections/{subjectId}/episodes` | Me |
 | Update Collection Status | `updateCollection` | Update episode collection status | `PUT /v0/users/-/collections/-/episodes/{episodeId}` | Me |
-| Update Many Collection Statuses | `updateCollections` | Update many episode collection statuses | `PATCH /v0/users/-/collections/{subjectId}/episodes` | Me |
+| Update Collection Statuses | `updateCollections` | Update episode collection statuses | `PATCH /v0/users/-/collections/{subjectId}/episodes` | Me |
 
 ### 3.4 Character Resource — New Operations
 
