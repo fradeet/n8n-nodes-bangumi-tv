@@ -6,6 +6,8 @@ import { properties as getSubjectsProps } from './getSubjects.operation';
 import { properties as addSubjectProps } from './addSubject.operation';
 import { properties as updateSubjectProps } from './updateSubject.operation';
 import { properties as deleteSubjectProps } from './deleteSubject.operation';
+import { properties as collectProps } from './collect.operation';
+import { properties as uncollectProps } from './uncollect.operation';
 
 export const description: INodeProperties[] = [
 	{
@@ -19,6 +21,12 @@ export const description: INodeProperties[] = [
 				value: 'addSubject',
 				action: 'Append subject to index',
 				description: 'Insert a subject into an index',
+			},
+			{
+				name: 'Collect',
+				value: 'collect',
+				action: 'Collect index',
+				description: 'Add index to your collection',
 			},
 			{
 				name: 'Create',
@@ -45,6 +53,12 @@ export const description: INodeProperties[] = [
 				description: 'Retrieve subjects in an index',
 			},
 			{
+				name: 'Uncollect',
+				value: 'uncollect',
+				action: 'Uncollect index',
+				description: 'Remove index from your collection',
+			},
+			{
 				name: 'Update',
 				value: 'update',
 				action: 'Update index',
@@ -67,4 +81,6 @@ export const description: INodeProperties[] = [
 	...addSubjectProps,
 	...updateSubjectProps,
 	...deleteSubjectProps,
+	...collectProps,
+	...uncollectProps,
 ];
