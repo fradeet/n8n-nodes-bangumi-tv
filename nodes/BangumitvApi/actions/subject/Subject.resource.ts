@@ -7,6 +7,9 @@ import { properties as getImageProps } from './getImage.operation';
 import { properties as getPersonsProps } from './getPersons.operation';
 import { properties as getCharactersProps } from './getCharacters.operation';
 import { properties as getRelationsProps } from './getRelations.operation';
+import { properties as getCollectionProps } from './getCollection.operation';
+import { properties as createOrUpdateCollectionProps } from './createOrUpdateCollection.operation';
+import { properties as updateCollectionProps } from './updateCollection.operation';
 
 export const description: INodeProperties[] = [
 	{
@@ -15,6 +18,12 @@ export const description: INodeProperties[] = [
 		type: 'options',
 		noDataExpression: true,
 		options: [
+			{
+				name: 'Create or Update Collection Status',
+				value: 'createOrUpdateCollection',
+				action: 'Create or update subject collection status',
+				description: 'Create or update your watch status for a subject',
+			},
 			{
 				name: 'Get',
 				value: 'get',
@@ -26,6 +35,12 @@ export const description: INodeProperties[] = [
 				value: 'getCalendar',
 				action: 'Get calendar',
 				description: 'Retrieve daily broadcast schedule for subjects',
+			},
+			{
+				name: 'Get Collection Status',
+				value: 'getCollection',
+				action: 'Get subject collection status',
+				description: 'Retrieve your watch status and rating for a subject',
 			},
 			{
 				name: 'Get Image',
@@ -63,6 +78,12 @@ export const description: INodeProperties[] = [
 				action: 'Search subjects',
 				description: 'Search subjects by keyword',
 			},
+			{
+				name: 'Update Collection Status',
+				value: 'updateCollection',
+				action: 'Update subject collection status',
+				description: 'Update your viewing progress for a subject',
+			},
 		],
 		default: 'getMany',
 		displayOptions: {
@@ -79,4 +100,7 @@ export const description: INodeProperties[] = [
 	...getPersonsProps,
 	...getCharactersProps,
 	...getRelationsProps,
+	...getCollectionProps,
+	...createOrUpdateCollectionProps,
+	...updateCollectionProps,
 ];
