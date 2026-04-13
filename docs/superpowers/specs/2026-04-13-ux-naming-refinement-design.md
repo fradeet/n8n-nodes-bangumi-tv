@@ -32,17 +32,17 @@ The current node has some naming inconsistencies with n8n UX guidelines:
 
 ---
 
-### 2. Collection: Description Standardization
+### 2. Collection: Description and Action Standardization
 
-**Rationale**: n8n UX guidelines specify "Retrieve" or "List" as standard vocabulary, not "View". Also omit articles ("a user's" → "user").
+**Rationale**: n8n UX guidelines specify "Retrieve" or "List" as standard vocabulary, not "View". Also omit articles ("a user's" → "user"). Actions should clearly indicate user context.
 
-| Operation | Current Description | New Description |
-|-----------|---------------------|-----------------|
-| Get Many | `View a user's collected subjects` | `Retrieve collected subjects for a user` |
-| Get Character Collection | `View a user's collected character` | `Retrieve collected character for a user` |
-| Get Many Character Collections | `View a user's collected characters` | `Retrieve collected characters for a user` |
-| Get Person Collection | `View a user's collected person` | `Retrieve collected person for a user` |
-| Get Many Person Collections | `View a user's collected persons` | `Retrieve collected persons for a user` |
+| Operation | Current action | New action | Current Description | New Description |
+|-----------|----------------|------------|---------------------|-----------------|
+| Get Many | `Get many collections` | `Get many user collections` | `View a user's collected subjects` | `Retrieve collected subjects for a user` |
+| Get Character Collection | `Get character collection` | `Get user's character collection` | `View a user's collected character` | `Retrieve collected character for a user` |
+| Get Many Character Collections | `Get many character collections` | `Get many user character collections` | `View a user's collected characters` | `Retrieve collected characters for a user` |
+| Get Person Collection | `Get person collection` | `Get user's person collection` | `View a user's collected person` | `Retrieve collected person for a user` |
+| Get Many Person Collections | `Get many person collections` | `Get many user person collections` | `View a user's collected persons` | `Retrieve collected persons for a user` |
 
 **Files to modify**:
 - `nodes/BangumitvApi/actions/collection/Collection.resource.ts`
@@ -87,7 +87,7 @@ The current node has some naming inconsistencies with n8n UX guidelines:
 |------|---------|
 | `actions/subject/Subject.resource.ts` | Update 3 operations |
 | `actions/episode/Episode.resource.ts` | Update 4 operations |
-| `actions/collection/Collection.resource.ts` | Update 5 descriptions |
+| `actions/collection/Collection.resource.ts` | Update 5 actions and descriptions |
 
 ---
 
