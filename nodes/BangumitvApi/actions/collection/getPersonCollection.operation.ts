@@ -1,4 +1,3 @@
-// nodes/BangumitvApi/actions/collection/getPersonCollection.operation.ts
 import type { INodeProperties } from 'n8n-workflow';
 
 export const properties: INodeProperties[] = [

@@ -1,4 +1,3 @@
-// nodes/BangumitvApi/actions/collection/getMany.operation.ts
 import type { INodeProperties } from 'n8n-workflow';
 import {
 	limitProperty,

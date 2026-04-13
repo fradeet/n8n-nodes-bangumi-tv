@@ -1,4 +1,3 @@
-// nodes/BangumitvApi/actions/collection/Collection.resource.ts
 import type { INodeProperties } from 'n8n-workflow';
 import { properties as getManyProps } from './getMany.operation';
 import { properties as getCharacterCollectionProps } from './getCharacterCollection.operation';
@@ -14,16 +13,16 @@ export const description: INodeProperties[] = [
 		noDataExpression: true,
 		options: [
 			{
-				name: 'Get Many',
-				value: 'getMany',
-				action: 'Get many collections',
-				description: "View a user's collected subjects",
-			},
-			{
 				name: 'Get Character Collection',
 				value: 'getCharacterCollection',
 				action: 'Get character collection',
 				description: "View a user's collected character",
+			},
+			{
+				name: 'Get Many',
+				value: 'getMany',
+				action: 'Get many collections',
+				description: "View a user's collected subjects",
 			},
 			{
 				name: 'Get Many Character Collections',
@@ -32,16 +31,16 @@ export const description: INodeProperties[] = [
 				description: "View a user's collected characters",
 			},
 			{
-				name: 'Get Person Collection',
-				value: 'getPersonCollection',
-				action: 'Get person collection',
-				description: "View a user's collected person",
-			},
-			{
 				name: 'Get Many Person Collections',
 				value: 'getPersonCollections',
 				action: 'Get many person collections',
 				description: "View a user's collected persons",
+			},
+			{
+				name: 'Get Person Collection',
+				value: 'getPersonCollection',
+				action: 'Get person collection',
+				description: "View a user's collected person",
 			},
 		],
 		default: 'getMany',
