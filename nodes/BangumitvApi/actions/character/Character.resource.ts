@@ -4,6 +4,8 @@ import { properties as searchProps } from './search.operation';
 import { properties as getSubjectsProps } from './getSubjects.operation';
 import { properties as getPersonsProps } from './getPersons.operation';
 import { properties as getImageProps } from './getImage.operation';
+import { properties as collectProps } from './collect.operation';
+import { properties as uncollectProps } from './uncollect.operation';
 
 export const description: INodeProperties[] = [
 	{
@@ -12,6 +14,12 @@ export const description: INodeProperties[] = [
 		type: 'options',
 		noDataExpression: true,
 		options: [
+			{
+				name: 'Collect',
+				value: 'collect',
+				action: 'Collect character',
+				description: 'Add character to your collection',
+			},
 			{
 				name: 'Get',
 				value: 'get',
@@ -42,6 +50,12 @@ export const description: INodeProperties[] = [
 				action: 'Search characters',
 				description: 'Search characters by keyword',
 			},
+			{
+				name: 'Uncollect',
+				value: 'uncollect',
+				action: 'Uncollect character',
+				description: 'Remove character from your collection',
+			},
 		],
 		default: 'get',
 		displayOptions: { show: { resource: ['character'] } },
@@ -51,4 +65,6 @@ export const description: INodeProperties[] = [
 	...getSubjectsProps,
 	...getPersonsProps,
 	...getImageProps,
+	...collectProps,
+	...uncollectProps,
 ];
