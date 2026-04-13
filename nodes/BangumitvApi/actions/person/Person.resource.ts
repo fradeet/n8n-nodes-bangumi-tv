@@ -1,9 +1,11 @@
 import type { INodeProperties } from 'n8n-workflow';
+import { properties as collectProps } from './collect.operation';
 import { properties as getProps } from './get.operation';
-import { properties as searchProps } from './search.operation';
-import { properties as getSubjectsProps } from './getSubjects.operation';
 import { properties as getCharactersProps } from './getCharacters.operation';
 import { properties as getImageProps } from './getImage.operation';
+import { properties as getSubjectsProps } from './getSubjects.operation';
+import { properties as searchProps } from './search.operation';
+import { properties as uncollectProps } from './uncollect.operation';
 
 export const description: INodeProperties[] = [
 	{
@@ -12,6 +14,12 @@ export const description: INodeProperties[] = [
 		type: 'options',
 		noDataExpression: true,
 		options: [
+			{
+				name: 'Collect',
+				value: 'collect',
+				action: 'Collect person',
+				description: 'Add person to your collection',
+			},
 			{
 				name: 'Get',
 				value: 'get',
@@ -42,13 +50,21 @@ export const description: INodeProperties[] = [
 				action: 'Search persons',
 				description: 'Search persons by keyword',
 			},
+			{
+				name: 'Uncollect',
+				value: 'uncollect',
+				action: 'Uncollect person',
+				description: 'Remove person from your collection',
+			},
 		],
 		default: 'get',
 		displayOptions: { show: { resource: ['person'] } },
 	},
+	...collectProps,
 	...getProps,
-	...searchProps,
-	...getSubjectsProps,
 	...getCharactersProps,
 	...getImageProps,
+	...getSubjectsProps,
+	...searchProps,
+	...uncollectProps,
 ];
