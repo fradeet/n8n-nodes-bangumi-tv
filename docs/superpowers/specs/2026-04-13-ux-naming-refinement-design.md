@@ -38,11 +38,11 @@ The current node has some naming inconsistencies with n8n UX guidelines:
 
 | Operation | Current action | New action | Current Description | New Description |
 |-----------|----------------|------------|---------------------|-----------------|
-| Get Many | `Get many collections` | `Get many user collections` | `View a user's collected subjects` | `Retrieve collected subjects for a user` |
+| Get Many | `Get many collections` | `Get many user's collections` | `View a user's collected subjects` | `Retrieve collected subjects for a user` |
 | Get Character Collection | `Get character collection` | `Get user's character collection` | `View a user's collected character` | `Retrieve collected character for a user` |
-| Get Many Character Collections | `Get many character collections` | `Get many user character collections` | `View a user's collected characters` | `Retrieve collected characters for a user` |
+| Get Many Character Collections | `Get many character collections` | `Get many user's character collections` | `View a user's collected characters` | `Retrieve collected characters for a user` |
 | Get Person Collection | `Get person collection` | `Get user's person collection` | `View a user's collected person` | `Retrieve collected person for a user` |
-| Get Many Person Collections | `Get many person collections` | `Get many user person collections` | `View a user's collected persons` | `Retrieve collected persons for a user` |
+| Get Many Person Collections | `Get many person collections` | `Get many user's person collections` | `View a user's collected persons` | `Retrieve collected persons for a user` |
 
 **Files to modify**:
 - `nodes/BangumitvApi/actions/collection/Collection.resource.ts`
