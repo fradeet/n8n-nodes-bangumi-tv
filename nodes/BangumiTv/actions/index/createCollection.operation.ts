@@ -7,7 +7,7 @@ export const properties: INodeProperties[] = [
 		type: 'string',
 		required: true,
 		default: '',
-		routing: { request: { method: 'DELETE', url: '=/v0/indices/{{$value}}/collect' } },
-		displayOptions: { show: { resource: ['index'], operation: ['uncollect'] } },
+		routing: { request: { method: 'POST', url: '=/v0/indices/{{$value}}/collect' } },
+		displayOptions: { show: { resource: ['index'], operation: ['createCollection'] } },
 	},
 ];

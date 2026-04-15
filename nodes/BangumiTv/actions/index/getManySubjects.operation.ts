@@ -11,7 +11,7 @@ export const properties: INodeProperties[] = [
 		routing: {
 			request: { method: 'GET', url: '=/v0/indices/{{$value}}/subjects' },
 		},
-		displayOptions: { show: { resource: ['index'], operation: ['getSubjects'] } },
+		displayOptions: { show: { resource: ['index'], operation: ['getManySubjects'] } },
 	},
 	{
 		displayName: 'Subject Type',
@@ -20,17 +20,17 @@ export const properties: INodeProperties[] = [
 		options: [{ name: 'All', value: '' }, ...subjectTypeOptions],
 		description: 'Filter by subject type',
 		default: '',
-		displayOptions: { show: { resource: ['index'], operation: ['getSubjects'] } },
+		displayOptions: { show: { resource: ['index'], operation: ['getManySubjects'] } },
 		routing: { request: { qs: { type: '={{$value}}' } } },
 	},
 	{
 		...limitProperty,
-		displayOptions: { show: { resource: ['index'], operation: ['getSubjects'] } },
+		displayOptions: { show: { resource: ['index'], operation: ['getManySubjects'] } },
 		routing: { request: { qs: { limit: '={{$value}}' } } },
 	},
 	{
 		...offsetProperty,
-		displayOptions: { show: { resource: ['index'], operation: ['getSubjects'] } },
+		displayOptions: { show: { resource: ['index'], operation: ['getManySubjects'] } },
 		routing: { request: { qs: { offset: '={{$value}}' } } },
 	},
 ];

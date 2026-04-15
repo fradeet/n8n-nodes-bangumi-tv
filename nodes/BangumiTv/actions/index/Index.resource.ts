@@ -2,12 +2,12 @@ import type { INodeProperties } from 'n8n-workflow';
 import { properties as createProps } from './create.operation';
 import { properties as getProps } from './get.operation';
 import { properties as updateProps } from './update.operation';
-import { properties as getSubjectsProps } from './getSubjects.operation';
-import { properties as addSubjectProps } from './addSubject.operation';
+import { properties as addendSubjectProps } from './addendSubject.operation';
 import { properties as updateSubjectProps } from './updateSubject.operation';
 import { properties as deleteSubjectProps } from './deleteSubject.operation';
-import { properties as collectProps } from './collect.operation';
-import { properties as uncollectProps } from './uncollect.operation';
+import { properties as getManySubjectsProps } from './getManySubjects.operation';
+import { properties as createCollectionProps } from './createCollection.operation';
+import { properties as deleteCollectionProps } from './deleteCollection.operation';
 
 export const description: INodeProperties[] = [
 	{
@@ -18,15 +18,9 @@ export const description: INodeProperties[] = [
 		options: [
 			{
 				name: 'Append Subject',
-				value: 'addSubject',
+				value: 'addendSubject',
 				action: 'Append subject to index',
-				description: 'Insert a subject into an index',
-			},
-			{
-				name: 'Collect',
-				value: 'collect',
-				action: 'Collect index',
-				description: 'Add index to your collection',
+				description: 'Append a subject into an index',
 			},
 			{
 				name: 'Create',
@@ -35,52 +29,58 @@ export const description: INodeProperties[] = [
 				description: 'Create a new index',
 			},
 			{
+				name: 'Create Collection',
+				value: 'createCollection',
+				action: 'Create index collection',
+				description: 'Create a new index collection',
+			},
+			{
+				name: 'Delete Collection',
+				value: 'deleteCollection',
+				action: 'Delete index collection',
+				description: 'Delete an index collection',
+			},
+			{
 				name: 'Delete Subject',
 				value: 'deleteSubject',
 				action: 'Delete subject from index',
-				description: 'Remove a subject from an index',
+				description: 'Delete a subject inside an index',
 			},
 			{
 				name: 'Get',
 				value: 'get',
 				action: 'Get index',
-				description: 'Retrieve an index by ID',
+				description: 'Retrieve an index detail',
 			},
 			{
-				name: 'Get Many Subjects',
-				value: 'getSubjects',
-				action: 'Get many subjects in index',
-				description: 'Retrieve subjects in an index',
-			},
-			{
-				name: 'Uncollect',
-				value: 'uncollect',
-				action: 'Uncollect index',
-				description: 'Remove index from your collection',
+				name: 'Get Subjects',
+				value: 'getManySubjects',
+				action: 'Get subjects in index',
+				description: 'List all subjects in an index',
 			},
 			{
 				name: 'Update',
 				value: 'update',
 				action: 'Update index',
-				description: 'Update index information',
+				description: 'Update a index',
 			},
 			{
 				name: 'Update Subject',
 				value: 'updateSubject',
 				action: 'Update subject in index',
-				description: 'Update subject information in an index',
+				description: 'Update subject inside a index',
 			},
 		],
 		default: 'get',
 		displayOptions: { show: { resource: ['index'] } },
 	},
+	...addendSubjectProps,
 	...createProps,
-	...getProps,
-	...updateProps,
-	...getSubjectsProps,
-	...addSubjectProps,
-	...updateSubjectProps,
+	...createCollectionProps,
+	...deleteCollectionProps,
 	...deleteSubjectProps,
-	...collectProps,
-	...uncollectProps,
+	...getProps,
+	...getManySubjectsProps,
+	...updateProps,
+	...updateSubjectProps,
 ];
