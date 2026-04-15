@@ -21,6 +21,12 @@ export const description: INodeProperties[] = [
 				description: 'Create a new character collection',
 			},
 			{
+				name: 'Delete Collection',
+				value: 'deleteCollection',
+				action: 'Delete person collection',
+				description: 'Delete a person collection',
+			},
+			{
 				name: 'Get',
 				value: 'get',
 				action: 'Get person',
@@ -49,12 +55,6 @@ export const description: INodeProperties[] = [
 				value: 'search',
 				action: 'Search persons',
 				description: 'Search persons by keyword',
-			},
-			{
-				name: 'Delete Collection',
-				value: 'deleteCollection',
-				action: 'Delete person collection',
-				description: 'Delete a person collection',
 			},
 		],
 		default: 'get',
