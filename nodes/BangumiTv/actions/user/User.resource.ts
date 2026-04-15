@@ -13,13 +13,13 @@ export const description: INodeProperties[] = [
 			{
 				name: 'Get',
 				value: 'get',
-				action: "Get user profile",
+				action: 'Get user profile',
 				description: 'Retrieve user profile',
 			},
 			{
 				name: 'Get Avatar',
 				value: 'getAvatar',
-				action: "Get user avatar",
+				action: 'Get user avatar',
 				description: 'Retrieve user avatar',
 			},
 			{

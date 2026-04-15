@@ -28,7 +28,7 @@ export const description: INodeProperties[] = [
 				name: 'Get Many Persons',
 				value: 'getManyPersons',
 				action: 'Get many user person collections',
-				description: "Retrieve a list of person collections",
+				description: 'Retrieve a list of person collections',
 			},
 			{
 				name: 'Get Many Subjects',
@@ -40,7 +40,7 @@ export const description: INodeProperties[] = [
 				name: 'Get Person',
 				value: 'getPerson',
 				action: 'Get user person collection',
-				description: "Retrieve a person collection",
+				description: 'Retrieve a person collection',
 			},
 		],
 		default: 'getManySubjects',
