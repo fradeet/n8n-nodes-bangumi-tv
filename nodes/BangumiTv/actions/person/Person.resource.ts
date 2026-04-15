@@ -1,11 +1,11 @@
 import type { INodeProperties } from 'n8n-workflow';
-import { properties as collectProps } from './collect.operation';
+import { properties as createCollectionProps } from './createCollection.operation';
 import { properties as getProps } from './get.operation';
-import { properties as getCharactersProps } from './getCharacters.operation';
+import { properties as getManyRelatedCharactersProps } from './getManyRelatedCharacters.operation';
 import { properties as getImageProps } from './getImage.operation';
-import { properties as getSubjectsProps } from './getSubjects.operation';
+import { properties as getManyRelatedSubjectsProps } from './getManyRelatedSubjects.operation';
 import { properties as searchProps } from './search.operation';
-import { properties as uncollectProps } from './uncollect.operation';
+import { properties as deleteCollectionProps } from './deleteCollection.operation';
 
 export const description: INodeProperties[] = [
 	{
@@ -15,16 +15,16 @@ export const description: INodeProperties[] = [
 		noDataExpression: true,
 		options: [
 			{
-				name: 'Collect',
-				value: 'collect',
-				action: 'Collect person',
-				description: 'Add person to your collection',
+				name: 'Create Collection',
+				value: 'createCollection',
+				action: 'Create character collection',
+				description: 'Create a new character collection',
 			},
 			{
 				name: 'Get',
 				value: 'get',
 				action: 'Get person',
-				description: 'Retrieve a person by ID',
+				description: 'Retrieve a person detail',
 			},
 			{
 				name: 'Get Image',
@@ -33,14 +33,14 @@ export const description: INodeProperties[] = [
 				description: 'Retrieve person image',
 			},
 			{
-				name: 'Get Many Characters',
-				value: 'getCharacters',
+				name: 'Get Related Characters',
+				value: 'getManyRelatedCharacters',
 				action: 'Get related characters for person',
 				description: 'Retrieve related characters for a person',
 			},
 			{
-				name: 'Get Many Subjects',
-				value: 'getSubjects',
+				name: 'Get Related Subjects',
+				value: 'getManyRelatedSubjects',
 				action: 'Get related subjects for person',
 				description: 'Retrieve related subjects for a person',
 			},
@@ -51,20 +51,20 @@ export const description: INodeProperties[] = [
 				description: 'Search persons by keyword',
 			},
 			{
-				name: 'Uncollect',
-				value: 'uncollect',
-				action: 'Uncollect person',
-				description: 'Remove person from your collection',
+				name: 'Delete Collection',
+				value: 'deleteCollection',
+				action: 'Delete person collection',
+				description: 'Delete a person collection',
 			},
 		],
 		default: 'get',
 		displayOptions: { show: { resource: ['person'] } },
 	},
-	...collectProps,
+	...createCollectionProps,
 	...getProps,
-	...getCharactersProps,
+	...getManyRelatedCharactersProps,
 	...getImageProps,
-	...getSubjectsProps,
+	...getManyRelatedSubjectsProps,
 	...searchProps,
-	...uncollectProps,
+	...deleteCollectionProps,
 ];
