@@ -18,7 +18,7 @@ export const description: INodeProperties[] = [
 				name: 'Create Collection',
 				value: 'createCollection',
 				action: 'Create person collection',
-				description: 'Create a new character collection',
+				description: 'Create a new person collection',
 			},
 			{
 				name: 'Delete Collection',
