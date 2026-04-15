@@ -10,13 +10,13 @@ export const properties: INodeProperties[] = [
 		routing: {
 			request: {
 				method: 'GET',
-				url: '=/v0/subjects/{{$value}}/persons',
+				url: '=/v0/subjects/{{$value}}/characters',
 			},
 		},
 		displayOptions: {
 			show: {
 				resource: ['subject'],
-				operation: ['getPersons'],
+				operation: ['getManyRelatedCharacters'],
 			},
 		},
 	},

@@ -4,10 +4,9 @@ import { properties as searchProps } from './search.operation';
 import { properties as getManyProps } from './getMany.operation';
 import { properties as getProps } from './get.operation';
 import { properties as getImageProps } from './getImage.operation';
-import { properties as getPersonsProps } from './getPersons.operation';
-import { properties as getCharactersProps } from './getCharacters.operation';
-import { properties as getRelationsProps } from './getRelations.operation';
-import { properties as getCollectionProps } from './getCollection.operation';
+import { properties as getManyRelatedPersonsProps } from './getManyRelatedPersons.operation';
+import { properties as getManyRelatedCharactersProps } from './getManyRelatedCharacters.operation';
+import { properties as getManyRelatedSubjectsProps } from './getManyRelatedSubjects.operation';
 import { properties as createOrUpdateCollectionProps } from './createOrUpdateCollection.operation';
 import { properties as updateCollectionProps } from './updateCollection.operation';
 
@@ -19,28 +18,22 @@ export const description: INodeProperties[] = [
 		noDataExpression: true,
 		options: [
 			{
-				name: 'Create or Update Collection Status',
+				name: 'Create or Update Collection',
 				value: 'createOrUpdateCollection',
-				action: 'Create or update subject collection status',
-				description: 'Create or update your watch status for a subject',
+				action: 'Create or update subject collection',
+				description: 'Create a new subject collection or update an existing one',
 			},
 			{
 				name: 'Get',
 				value: 'get',
 				action: 'Get subject',
-				description: 'Retrieve a subject by ID',
+				description: 'Retrieve a subject detail',
 			},
 			{
 				name: 'Get Calendar',
 				value: 'getCalendar',
 				action: 'Get calendar',
 				description: 'Retrieve daily broadcast schedule for subjects',
-			},
-			{
-				name: 'Get Collection Status',
-				value: 'getCollection',
-				action: 'Get subject collection status',
-				description: 'Retrieve your watch status and rating for a subject',
 			},
 			{
 				name: 'Get Image',
@@ -52,25 +45,25 @@ export const description: INodeProperties[] = [
 				name: 'Get Many',
 				value: 'getMany',
 				action: 'Get many subjects',
-				description: 'Browse subjects with filters',
+				description: 'Retrieve a list of subjects',
 			},
 			{
-				name: 'Get Many Characters',
-				value: 'getCharacters',
+				name: 'Get Related Characters',
+				value: 'getManyRelatedCharacters',
 				action: 'Get related characters for subject',
-				description: 'Retrieve related characters for a subject',
+				description: 'Retrieve related characters inside a subject',
 			},
 			{
-				name: 'Get Many Persons',
-				value: 'getPersons',
+				name: 'Get Related Persons',
+				value: 'getManyRelatedPersons',
 				action: 'Get related persons for subject',
-				description: 'Retrieve related persons for a subject',
+				description: 'Retrieve related persons inside a subject',
 			},
 			{
-				name: 'Get Many Related Subjects',
-				value: 'getRelations',
+				name: 'Get Related Subjects',
+				value: 'getManyRelatedSubjects',
 				action: 'Get related subjects for subject',
-				description: 'Retrieve related subjects for a subject',
+				description: 'Retrieve related subjects inside a subject',
 			},
 			{
 				name: 'Search',
@@ -79,28 +72,23 @@ export const description: INodeProperties[] = [
 				description: 'Search subjects by keyword',
 			},
 			{
-				name: 'Update Collection Status',
+				name: 'Update Collection',
 				value: 'updateCollection',
-				action: 'Update subject collection status',
-				description: 'Update your viewing progress for a subject',
+				action: 'Update subject collection',
+				description: 'Update collection inside a subject',
 			},
 		],
 		default: 'getMany',
-		displayOptions: {
-			show: {
-				resource: ['subject'],
-			},
-		},
+		displayOptions: { show: { resource: ['subject'] } },
 	},
 	...getCalendarProps,
 	...searchProps,
 	...getManyProps,
 	...getProps,
 	...getImageProps,
-	...getPersonsProps,
-	...getCharactersProps,
-	...getRelationsProps,
-	...getCollectionProps,
+	...getManyRelatedPersonsProps,
+	...getManyRelatedCharactersProps,
+	...getManyRelatedSubjectsProps,
 	...createOrUpdateCollectionProps,
 	...updateCollectionProps,
 ];
