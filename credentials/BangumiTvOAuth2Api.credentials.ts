@@ -1,13 +1,13 @@
 import type { ICredentialType, INodeProperties, ICredentialTestRequest } from 'n8n-workflow';
 
-export class BangumitvApiOAuth2Api implements ICredentialType {
-	name = 'bangumitvApiOAuth2Api';
+export class BangumiTvOAuth2Api implements ICredentialType {
+	name = 'bangumiTvOAuth2Api';
 
 	extends = ['oAuth2Api'];
 
 	displayName = 'Bangumi.tv OAuth2 API';
 
-	icon = 'file:../nodes/BangumitvApi/bangumiLogo.svg' as const;
+	icon = 'file:../nodes/BangumiTv/bangumiLogo.svg' as const;
 
 	documentationUrl = 'https://github.com/bangumi/api/blob/master/docs-raw/How-to-Auth.md';
 

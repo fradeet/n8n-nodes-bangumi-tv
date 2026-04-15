@@ -1,10 +1,10 @@
 import { NodeConnectionTypes, type INodeType, type INodeTypeDescription } from 'n8n-workflow';
 import { properties } from './actions/descriptions';
 
-export class BangumitvApi implements INodeType {
+export class BangumiTv implements INodeType {
 	description: INodeTypeDescription = {
 		displayName: 'Bangumi.tv',
-		name: 'bangumitvApi',
+		name: 'bangumiTv',
 		icon: 'file:bangumiLogo.svg',
 		group: ['transform'],
 		version: [1],
@@ -17,7 +17,7 @@ export class BangumitvApi implements INodeType {
 		usableAsTool: true,
 		inputs: [NodeConnectionTypes.Main],
 		outputs: [NodeConnectionTypes.Main],
-		credentials: [{ name: 'bangumitvApiOAuth2Api', required: true }],
+		credentials: [{ name: 'bangumiTvOAuth2Api', required: true }],
 		requestDefaults: {
 			baseURL: 'https://api.bgm.tv',
 			headers: {

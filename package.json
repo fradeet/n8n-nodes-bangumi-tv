@@ -23,8 +23,8 @@
   "n8n": {
     "n8nNodesApiVersion": 1,
     "strict": true,
-    "credentials": ["dist/credentials/BangumitvApiOAuth2Api.credentials.js"],
-    "nodes": ["dist/nodes/BangumitvApi/BangumitvApi.node.js"]
+    "credentials": ["dist/credentials/BangumiTvOAuth2Api.credentials.js"],
+    "nodes": ["dist/nodes/BangumiTv/BangumiTv.node.js"]
   },
   "devDependencies": {
     "@n8n/node-cli": "*",

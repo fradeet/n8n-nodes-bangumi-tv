@@ -1,4 +1,4 @@
-// nodes/BangumitvApi/actions/descriptions.ts
+// nodes/BangumiTv/actions/descriptions.ts
 import type { INodeProperties } from 'n8n-workflow';
 import { description as characterDescription } from './character/Character.resource';
 import { description as collectionDescription } from './collection/Collection.resource';
