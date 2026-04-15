@@ -10,17 +10,17 @@ export const properties: INodeProperties[] = [
 		routing: {
 			request: {
 				method: 'GET',
-				url: '=/v0/users/{{$value}}/collections/-/persons/{{$parameter["personId"]}}',
+				url: '=/v0/users/{{$value}}/collections/-/characters/{{$parameter["characterId"]}}',
 			},
 		},
-		displayOptions: { show: { resource: ['collection'], operation: ['getPersonCollection'] } },
+		displayOptions: { show: { resource: ['collection'], operation: ['getCharacter'] } },
 	},
 	{
-		displayName: 'Person ID',
-		name: 'personId',
+		displayName: 'Character ID',
+		name: 'characterId',
 		type: 'string',
 		required: true,
 		default: '',
-		displayOptions: { show: { resource: ['collection'], operation: ['getPersonCollection'] } },
+		displayOptions: { show: { resource: ['collection'], operation: ['getCharacter'] } },
 	},
 ];

@@ -1,9 +1,9 @@
 import type { INodeProperties } from 'n8n-workflow';
-import { properties as getManyProps } from './getMany.operation';
-import { properties as getCharacterCollectionProps } from './getCharacterCollection.operation';
-import { properties as getCharacterCollectionsProps } from './getCharacterCollections.operation';
-import { properties as getPersonCollectionProps } from './getPersonCollection.operation';
-import { properties as getPersonCollectionsProps } from './getPersonCollections.operation';
+import { properties as getCharacterProps } from './getCharacter.operation';
+import { properties as getManySubjectsProps } from './getManySubjects.operation';
+import { properties as getManyCharactersProps } from './getManyCharacters.operation';
+import { properties as getManyPersonsProps } from './getManyPersons.operation';
+import { properties as getPersonProps } from './getPerson.operation';
 
 export const description: INodeProperties[] = [
 	{
@@ -13,42 +13,42 @@ export const description: INodeProperties[] = [
 		noDataExpression: true,
 		options: [
 			{
-				name: 'Get Character Collection',
-				value: 'getCharacterCollection',
+				name: 'Get Character',
+				value: 'getCharacter',
 				action: 'Get character collection',
 				description: "View a user's collected character",
 			},
 			{
-				name: 'Get Many',
-				value: 'getMany',
-				action: 'Get many collections',
-				description: "View a user's collected subjects",
-			},
-			{
-				name: 'Get Many Character Collections',
-				value: 'getCharacterCollections',
-				action: 'Get many character collections',
+				name: 'Get Many Characters',
+				value: 'getManyCharacters',
+				action: 'Get character collections',
 				description: "View a user's collected characters",
 			},
 			{
-				name: 'Get Many Person Collections',
-				value: 'getPersonCollections',
-				action: 'Get many person collections',
+				name: 'Get Many Persons',
+				value: 'getManyPersons',
+				action: 'Get person collections',
 				description: "View a user's collected persons",
 			},
 			{
-				name: 'Get Person Collection',
-				value: 'getPersonCollection',
+				name: 'Get Many Subjects',
+				value: 'getManySubjects',
+				action: 'Get subject collections',
+				description: "View a user's collected subjects",
+			},
+			{
+				name: 'Get Person',
+				value: 'getPerson',
 				action: 'Get person collection',
 				description: "View a user's collected person",
 			},
 		],
-		default: 'getMany',
+		default: 'getManySubjects',
 		displayOptions: { show: { resource: ['collection'] } },
 	},
-	...getManyProps,
-	...getCharacterCollectionProps,
-	...getCharacterCollectionsProps,
-	...getPersonCollectionProps,
-	...getPersonCollectionsProps,
+	...getCharacterProps,
+	...getManyCharactersProps,
+	...getManyPersonsProps,
+	...getManySubjectsProps,
+	...getPersonProps,
 ];

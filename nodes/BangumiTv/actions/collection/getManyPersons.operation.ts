@@ -9,18 +9,18 @@ export const properties: INodeProperties[] = [
 		required: true,
 		default: '',
 		routing: {
-			request: { method: 'GET', url: '=/v0/users/{{$value}}/collections/-/characters' },
+			request: { method: 'GET', url: '=/v0/users/{{$value}}/collections/-/persons' },
 		},
-		displayOptions: { show: { resource: ['collection'], operation: ['getCharacterCollections'] } },
+		displayOptions: { show: { resource: ['collection'], operation: ['getManyPersons'] } },
 	},
 	{
 		...limitProperty,
-		displayOptions: { show: { resource: ['collection'], operation: ['getCharacterCollections'] } },
+		displayOptions: { show: { resource: ['collection'], operation: ['getManyPersons'] } },
 		routing: { request: { qs: { limit: '={{$value}}' } } },
 	},
 	{
 		...offsetProperty,
-		displayOptions: { show: { resource: ['collection'], operation: ['getCharacterCollections'] } },
+		displayOptions: { show: { resource: ['collection'], operation: ['getManyPersons'] } },
 		routing: { request: { qs: { offset: '={{$value}}' } } },
 	},
 ];
