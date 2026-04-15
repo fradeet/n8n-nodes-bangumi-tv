@@ -14,7 +14,7 @@ export const properties: INodeProperties[] = [
 			},
 		},
 		displayOptions: {
-			show: { resource: ['character'], operation: ['collect'] },
+			show: { resource: ['character'], operation: ['createCollection'] },
 		},
 	},
 ];
