@@ -11,7 +11,7 @@ export const properties: INodeProperties[] = [
 		displayOptions: {
 			show: {
 				resource: ['revision'],
-				operation: ['getCharacterRevisions'],
+				operation: ['getManyCharacterRevisions'],
 			},
 		},
 		routing: {
@@ -27,7 +27,7 @@ export const properties: INodeProperties[] = [
 		displayOptions: {
 			show: {
 				resource: ['revision'],
-				operation: ['getCharacterRevisions'],
+				operation: ['getManyCharacterRevisions'],
 			},
 		},
 		routing: { request: { qs: { limit: '={{$value}}' } } },
@@ -37,7 +37,7 @@ export const properties: INodeProperties[] = [
 		displayOptions: {
 			show: {
 				resource: ['revision'],
-				operation: ['getCharacterRevisions'],
+				operation: ['getManyCharacterRevisions'],
 			},
 		},
 		routing: { request: { qs: { offset: '={{$value}}' } } },

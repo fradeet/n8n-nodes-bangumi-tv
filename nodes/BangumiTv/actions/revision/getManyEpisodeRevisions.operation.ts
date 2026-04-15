@@ -3,22 +3,22 @@ import { limitProperty, offsetProperty } from '../common.descriptions';
 
 export const properties: INodeProperties[] = [
 	{
-		displayName: 'Subject ID',
-		name: 'subjectId',
+		displayName: 'Episode ID',
+		name: 'episodeId',
 		type: 'string',
 		default: '',
-		description: 'Filter by subject ID',
+		description: 'Filter by episode ID',
 		displayOptions: {
 			show: {
 				resource: ['revision'],
-				operation: ['getSubjectRevisions'],
+				operation: ['getManyEpisodeRevisions'],
 			},
 		},
 		routing: {
 			request: {
 				method: 'GET',
-				url: '=/v0/revisions/subjects',
-				qs: { subject_id: '={{$value}}' },
+				url: '=/v0/revisions/episodes',
+				qs: { episode_id: '={{$value}}' },
 			},
 		},
 	},
@@ -27,7 +27,7 @@ export const properties: INodeProperties[] = [
 		displayOptions: {
 			show: {
 				resource: ['revision'],
-				operation: ['getSubjectRevisions'],
+				operation: ['getManyEpisodeRevisions'],
 			},
 		},
 		routing: { request: { qs: { limit: '={{$value}}' } } },
@@ -37,7 +37,7 @@ export const properties: INodeProperties[] = [
 		displayOptions: {
 			show: {
 				resource: ['revision'],
-				operation: ['getSubjectRevisions'],
+				operation: ['getManyEpisodeRevisions'],
 			},
 		},
 		routing: { request: { qs: { offset: '={{$value}}' } } },

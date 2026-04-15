@@ -1,12 +1,12 @@
 import type { INodeProperties } from 'n8n-workflow';
-import { properties as getSubjectRevisionsProps } from './getSubjectRevisions.operation';
-import { properties as getEpisodeRevisionsProps } from './getEpisodeRevisions.operation';
-import { properties as getCharacterRevisionsProps } from './getCharacterRevisions.operation';
-import { properties as getPersonRevisionsProps } from './getPersonRevisions.operation';
-import { properties as getSubjectRevisionProps } from './getSubjectRevision.operation';
-import { properties as getEpisodeRevisionProps } from './getEpisodeRevision.operation';
+import { properties as getManyCharacterRevisionsProps } from './getManyCharacterRevisions.operation';
+import { properties as getManyEpisodeRevisionsProps } from './getManyEpisodeRevisions.operation';
+import { properties as getManyPersonRevisionsProps } from './getManyPersonRevisions.operation';
+import { properties as getManySubjectRevisionsProps } from './getManySubjectRevisions.operation';
 import { properties as getCharacterRevisionProps } from './getCharacterRevision.operation';
+import { properties as getEpisodeRevisionProps } from './getEpisodeRevision.operation';
 import { properties as getPersonRevisionProps } from './getPersonRevision.operation';
+import { properties as getSubjectRevisionProps } from './getSubjectRevision.operation';
 
 export const description: INodeProperties[] = [
 	{
@@ -29,25 +29,25 @@ export const description: INodeProperties[] = [
 			},
 			{
 				name: 'Get Many Character Revisions',
-				value: 'getCharacterRevisions',
+				value: 'getManyCharacterRevisions',
 				action: 'Get many character revisions',
 				description: 'Retrieve revision history for a character',
 			},
 			{
 				name: 'Get Many Episode Revisions',
-				value: 'getEpisodeRevisions',
+				value: 'getManyEpisodeRevisions',
 				action: 'Get many episode revisions',
 				description: 'Retrieve revision history for an episode',
 			},
 			{
 				name: 'Get Many Person Revisions',
-				value: 'getPersonRevisions',
+				value: 'getManyPersonRevisions',
 				action: 'Get many person revisions',
 				description: 'Retrieve revision history for a person',
 			},
 			{
 				name: 'Get Many Subject Revisions',
-				value: 'getSubjectRevisions',
+				value: 'getManySubjectRevisions',
 				action: 'Get many subject revisions',
 				description: 'Retrieve revision history for a subject',
 			},
@@ -64,19 +64,19 @@ export const description: INodeProperties[] = [
 				description: 'Retrieve a subject revision by ID',
 			},
 		],
-		default: 'getSubjectRevisions',
+		default: 'getManySubjectRevisions',
 		displayOptions: {
 			show: {
 				resource: ['revision'],
 			},
 		},
 	},
-	...getSubjectRevisionsProps,
-	...getEpisodeRevisionsProps,
-	...getCharacterRevisionsProps,
-	...getPersonRevisionsProps,
-	...getSubjectRevisionProps,
-	...getEpisodeRevisionProps,
+	...getManyCharacterRevisionsProps,
+	...getManyEpisodeRevisionsProps,
+	...getManyPersonRevisionsProps,
+	...getManySubjectRevisionsProps,
 	...getCharacterRevisionProps,
+	...getEpisodeRevisionProps,
 	...getPersonRevisionProps,
+	...getSubjectRevisionProps,
 ];
