@@ -14,8 +14,8 @@ export const properties: INodeProperties[] = [
 		},
 		displayOptions: {
 			show: {
-				resource: ['me'],
-				operation: ['get'],
+				resource: ['user'],
+				operation: ['getMe'],
 			},
 		},
 	},

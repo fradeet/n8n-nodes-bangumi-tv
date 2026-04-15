@@ -4,7 +4,6 @@ import { description as characterDescription } from './character/Character.resou
 import { description as collectionDescription } from './collection/Collection.resource';
 import { description as episodeDescription } from './episode/Episode.resource';
 import { description as indexDescription } from './index/Index.resource';
-import { description as meDescription } from './me/Me.resource';
 import { description as personDescription } from './person/Person.resource';
 import { description as revisionDescription } from './revision/Revision.resource';
 import { description as subjectDescription } from './subject/Subject.resource';
@@ -21,7 +20,6 @@ export const properties: INodeProperties[] = [
 			{ name: 'Collection', value: 'collection' },
 			{ name: 'Episode', value: 'episode' },
 			{ name: 'Index', value: 'index' },
-			{ name: 'Me', value: 'me' },
 			{ name: 'Person', value: 'person' },
 			{ name: 'Revision', value: 'revision' },
 			{ name: 'Subject', value: 'subject' },
@@ -33,7 +31,6 @@ export const properties: INodeProperties[] = [
 	...collectionDescription,
 	...episodeDescription,
 	...indexDescription,
-	...meDescription,
 	...personDescription,
 	...revisionDescription,
 	...subjectDescription,
