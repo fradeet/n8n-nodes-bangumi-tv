@@ -13,22 +13,20 @@ export const description: INodeProperties[] = [
 			{
 				name: 'Get',
 				value: 'get',
-				// eslint-disable-next-line n8n-nodes-base/node-param-operation-option-action-miscased
-				action: "Get user's profile",
-				description: 'Retrieve user profile by username',
+				action: "Get user profile",
+				description: 'Retrieve user profile',
 			},
 			{
 				name: 'Get Avatar',
 				value: 'getAvatar',
-				// eslint-disable-next-line n8n-nodes-base/node-param-operation-option-action-miscased
-				action: "Get user's avatar",
-				description: 'Retrieve user avatar by username',
+				action: "Get user avatar",
+				description: 'Retrieve user avatar',
 			},
 			{
 				name: 'Get Me',
 				value: 'getMe',
 				action: 'Get current user',
-				description: 'Retrieve current authenticated user profile',
+				description: 'Retrieve current user profile',
 			},
 		],
 		default: 'get',

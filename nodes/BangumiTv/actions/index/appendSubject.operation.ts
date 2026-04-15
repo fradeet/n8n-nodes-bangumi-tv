@@ -24,7 +24,7 @@ export const properties: INodeProperties[] = [
 				],
 			},
 		},
-		displayOptions: { show: { resource: ['index'], operation: ['addendSubject'] } },
+		displayOptions: { show: { resource: ['index'], operation: ['appendSubject'] } },
 	},
 	{
 		displayName: 'Subject ID',
@@ -32,7 +32,7 @@ export const properties: INodeProperties[] = [
 		type: 'string',
 		required: true,
 		default: '',
-		displayOptions: { show: { resource: ['index'], operation: ['addendSubject'] } },
+		displayOptions: { show: { resource: ['index'], operation: ['appendSubject'] } },
 	},
 	{
 		displayName: 'Sort',
@@ -40,13 +40,13 @@ export const properties: INodeProperties[] = [
 		type: 'number',
 		description: 'Sort order (lower = first)',
 		default: 0,
-		displayOptions: { show: { resource: ['index'], operation: ['addendSubject'] } },
+		displayOptions: { show: { resource: ['index'], operation: ['appendSubject'] } },
 	},
 	{
 		displayName: 'Comment',
 		name: 'comment',
 		type: 'string',
 		default: '',
-		displayOptions: { show: { resource: ['index'], operation: ['addendSubject'] } },
+		displayOptions: { show: { resource: ['index'], operation: ['appendSubject'] } },
 	},
 ];

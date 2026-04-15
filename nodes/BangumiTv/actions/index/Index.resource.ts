@@ -2,7 +2,7 @@ import type { INodeProperties } from 'n8n-workflow';
 import { properties as createProps } from './create.operation';
 import { properties as getProps } from './get.operation';
 import { properties as updateProps } from './update.operation';
-import { properties as addendSubjectProps } from './addendSubject.operation';
+import { properties as appendSubjectProps } from './appendSubject.operation';
 import { properties as updateSubjectProps } from './updateSubject.operation';
 import { properties as deleteSubjectProps } from './deleteSubject.operation';
 import { properties as getManySubjectsProps } from './getManySubjects.operation';
@@ -18,7 +18,7 @@ export const description: INodeProperties[] = [
 		options: [
 			{
 				name: 'Append Subject',
-				value: 'addendSubject',
+				value: 'appendSubject',
 				action: 'Append subject to index',
 				description: 'Append a subject into an index',
 			},
@@ -74,7 +74,7 @@ export const description: INodeProperties[] = [
 		default: 'get',
 		displayOptions: { show: { resource: ['index'] } },
 	},
-	...addendSubjectProps,
+	...appendSubjectProps,
 	...createProps,
 	...createCollectionProps,
 	...deleteCollectionProps,
