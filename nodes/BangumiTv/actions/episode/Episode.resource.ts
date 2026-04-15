@@ -2,9 +2,9 @@ import type { INodeProperties } from 'n8n-workflow';
 import { properties as getManyProps } from './getMany.operation';
 import { properties as getProps } from './get.operation';
 import { properties as getCollectionProps } from './getCollection.operation';
-import { properties as getCollectionsProps } from './getCollections.operation';
+import { properties as getManyCollectionProps } from './getManyCollection.operation';
 import { properties as updateCollectionProps } from './updateCollection.operation';
-import { properties as updateCollectionsProps } from './updateCollections.operation';
+import { properties as updateManyCollectionsProps } from './updateManyCollections.operation';
 
 export const description: INodeProperties[] = [
 	{
@@ -33,7 +33,7 @@ export const description: INodeProperties[] = [
 			},
 			{
 				name: 'Get Many Collection Statuses',
-				value: 'getCollections',
+				value: 'getManyCollection',
 				action: 'Get many episode collection statuses',
 				description: 'Retrieve episode watch statuses for a subject',
 			},
@@ -45,7 +45,7 @@ export const description: INodeProperties[] = [
 			},
 			{
 				name: 'Update Collection Statuses',
-				value: 'updateCollections',
+				value: 'updateManyCollections',
 				action: 'Update episode collection statuses',
 				description: 'Batch update watch statuses for episodes',
 			},
@@ -60,7 +60,7 @@ export const description: INodeProperties[] = [
 	...getManyProps,
 	...getProps,
 	...getCollectionProps,
-	...getCollectionsProps,
+	...getManyCollectionProps,
 	...updateCollectionProps,
-	...updateCollectionsProps,
+	...updateManyCollectionsProps,
 ];

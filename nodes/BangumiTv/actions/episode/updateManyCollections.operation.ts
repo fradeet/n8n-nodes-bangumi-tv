@@ -24,7 +24,7 @@ export const properties: INodeProperties[] = [
 				],
 			},
 		},
-		displayOptions: { show: { resource: ['episode'], operation: ['updateCollections'] } },
+		displayOptions: { show: { resource: ['episode'], operation: ['updateManyCollections'] } },
 	},
 	{
 		displayName: 'Episode IDs',
@@ -33,7 +33,7 @@ export const properties: INodeProperties[] = [
 		required: true,
 		default: '',
 		description: 'Comma-separated episode IDs',
-		displayOptions: { show: { resource: ['episode'], operation: ['updateCollections'] } },
+		displayOptions: { show: { resource: ['episode'], operation: ['updateManyCollections'] } },
 	},
 	{
 		displayName: 'Type',
@@ -43,6 +43,6 @@ export const properties: INodeProperties[] = [
 		required: true,
 		default: 1,
 		description: 'Episode collection type',
-		displayOptions: { show: { resource: ['episode'], operation: ['updateCollections'] } },
+		displayOptions: { show: { resource: ['episode'], operation: ['updateManyCollections'] } },
 	},
 ];

@@ -18,7 +18,7 @@ export const properties: INodeProperties[] = [
 				url: '=/v0/users/-/collections/{{$value}}/episodes',
 			},
 		},
-		displayOptions: { show: { resource: ['episode'], operation: ['getCollections'] } },
+		displayOptions: { show: { resource: ['episode'], operation: ['getManyCollection'] } },
 	},
 	{
 		displayName: 'Episode Type',
@@ -27,17 +27,17 @@ export const properties: INodeProperties[] = [
 		options: episodeTypeOptions,
 		default: 0,
 		description: 'Filter by episode type',
-		displayOptions: { show: { resource: ['episode'], operation: ['getCollections'] } },
+		displayOptions: { show: { resource: ['episode'], operation: ['getManyCollection'] } },
 		routing: { request: { qs: { episode_type: '={{$value}}' } } },
 	},
 	{
 		...episodeCollectionLimitProperty,
-		displayOptions: { show: { resource: ['episode'], operation: ['getCollections'] } },
+		displayOptions: { show: { resource: ['episode'], operation: ['getManyCollection'] } },
 		routing: { request: { qs: { limit: '={{$value}}' } } },
 	},
 	{
 		...offsetProperty,
-		displayOptions: { show: { resource: ['episode'], operation: ['getCollections'] } },
+		displayOptions: { show: { resource: ['episode'], operation: ['getManyCollection'] } },
 		routing: { request: { qs: { offset: '={{$value}}' } } },
 	},
 ];
