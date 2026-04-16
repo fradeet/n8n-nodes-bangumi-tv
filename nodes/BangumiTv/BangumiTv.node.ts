@@ -23,7 +23,7 @@ export class BangumiTv implements INodeType {
 			headers: {
 				Accept: 'application/json',
 				'Content-Type': 'application/json',
-				'User-Agent': 'n8n-bangumi-tv/0.1.0',
+				'User-Agent': 'fradeet/n8n-nodes-bangumi-tv/0.1.0',
 			},
 		},
 		properties,
