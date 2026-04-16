@@ -4,6 +4,7 @@ import { properties as getManySubjectsProps } from './getManySubjects.operation'
 import { properties as getManyCharactersProps } from './getManyCharacters.operation';
 import { properties as getManyPersonsProps } from './getManyPersons.operation';
 import { properties as getPersonProps } from './getPerson.operation';
+import { properties as getSubjectProps } from './getSubject.operation';
 
 export const description: INodeProperties[] = [
 	{
@@ -17,6 +18,12 @@ export const description: INodeProperties[] = [
 				value: 'getCharacter',
 				action: 'Get user character collection',
 				description: "Retrieve a user's character collection",
+			},
+			{
+				name: 'Get Subject',
+				value: 'getSubject',
+				action: 'Get user subject collection',
+				description: "Retrieve a user's subject collection",
 			},
 			{
 				name: 'Get Many Characters',
@@ -51,4 +58,5 @@ export const description: INodeProperties[] = [
 	...getManyPersonsProps,
 	...getManySubjectsProps,
 	...getPersonProps,
+	...getSubjectProps,
 ];
