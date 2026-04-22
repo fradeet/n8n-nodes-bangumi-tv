@@ -29,10 +29,10 @@ export const description: INodeProperties[] = [
 				description: 'Create a new index',
 			},
 			{
-				name: 'Create Collection',
+				name: 'Collect',
 				value: 'createCollection',
-				action: 'Create index collection',
-				description: 'Create a new index collection',
+				action: 'Collect index',
+				description: 'Collect an index',
 			},
 			{
 				name: 'Delete Collection',

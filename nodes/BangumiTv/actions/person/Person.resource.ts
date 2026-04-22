@@ -15,10 +15,10 @@ export const description: INodeProperties[] = [
 		noDataExpression: true,
 		options: [
 			{
-				name: 'Create Collection',
+				name: 'Collect',
 				value: 'createCollection',
-				action: 'Create person collection',
-				description: 'Create a new person collection',
+				action: 'Collect person',
+				description: 'Collect a person',
 			},
 			{
 				name: 'Delete Collection',
