@@ -18,10 +18,10 @@ export const description: INodeProperties[] = [
 		noDataExpression: true,
 		options: [
 			{
-				name: 'Create or Update Collection',
+				name: 'Collect or Update Collection',
 				value: 'createOrUpdateCollection',
-				action: 'Create or update subject collection',
-				description: 'Create a new subject collection or update an existing one',
+				action: 'Collect or update subject collection',
+				description: 'Collect a subject or update an existing collection',
 			},
 			{
 				name: 'Get',
@@ -74,8 +74,8 @@ export const description: INodeProperties[] = [
 			{
 				name: 'Update Collection',
 				value: 'updateCollection',
-				action: 'Update subject collection',
-				description: 'Update collection inside a subject',
+				action: 'Update existing subject collection',
+				description: 'Update an existing subject collection only',
 			},
 		],
 		default: 'getMany',
