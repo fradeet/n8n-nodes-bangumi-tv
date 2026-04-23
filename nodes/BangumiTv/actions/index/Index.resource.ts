@@ -23,16 +23,16 @@ export const description: INodeProperties[] = [
 				description: 'Append a subject into an index',
 			},
 			{
-				name: 'Create',
-				value: 'create',
-				action: 'Create index',
-				description: 'Create a new index',
-			},
-			{
 				name: 'Collect',
 				value: 'createCollection',
 				action: 'Collect index',
 				description: 'Collect an index',
+			},
+			{
+				name: 'Create',
+				value: 'create',
+				action: 'Create index',
+				description: 'Create a new index',
 			},
 			{
 				name: 'Delete Collection',

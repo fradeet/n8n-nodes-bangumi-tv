@@ -20,12 +20,6 @@ export const description: INodeProperties[] = [
 				description: "Retrieve a user's character collection",
 			},
 			{
-				name: 'Get Subject',
-				value: 'getSubject',
-				action: 'Get user subject collection',
-				description: "Retrieve a user's subject collection",
-			},
-			{
 				name: 'Get Many Characters',
 				value: 'getManyCharacters',
 				action: 'Get many user character collections',
@@ -48,6 +42,12 @@ export const description: INodeProperties[] = [
 				value: 'getPerson',
 				action: 'Get user person collection',
 				description: 'Retrieve a person collection',
+			},
+			{
+				name: 'Get Subject',
+				value: 'getSubject',
+				action: 'Get user subject collection',
+				description: "Retrieve a user's subject collection",
 			},
 		],
 		default: 'getManySubjects',
