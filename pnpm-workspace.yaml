@@ -1,3 +1,4 @@
 allowBuilds:
   eslint-plugin-n8n-nodes-base: true
-  isolated-vm: true
+  isolated-vm: false
+  unrs-resolver: false
