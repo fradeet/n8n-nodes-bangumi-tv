@@ -16,7 +16,7 @@ export class BangumiTv implements INodeType {
 		usableAsTool: true,
 		inputs: [NodeConnectionTypes.Main],
 		outputs: [NodeConnectionTypes.Main],
-		credentials: [{ name: 'bangumiTvOAuth2Api', required: true }],
+		credentials: [{ name: 'bangumiTvOAuth2Api', required: false }],
 		requestDefaults: {
 			baseURL: 'https://api.bgm.tv',
 			headers: {
