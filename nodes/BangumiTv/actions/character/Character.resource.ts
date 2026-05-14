@@ -4,8 +4,8 @@ import { properties as searchProps } from './search.operation';
 import { properties as getManyRelatedSubjectsProps } from './getManyRelatedSubjects.operation';
 import { properties as getManyRelatedPersonsProps } from './getManyRelatedPersons.operation';
 import { properties as getImageProps } from './getImage.operation';
-import { properties as createCollectionProps } from './createCollection.operation';
-import { properties as deleteCollectionProps } from './deleteCollection.operation';
+// import { properties as createCollectionProps } from './createCollection.operation';
+// import { properties as deleteCollectionProps } from './deleteCollection.operation';
 
 export const description: INodeProperties[] = [
 	{
@@ -14,18 +14,6 @@ export const description: INodeProperties[] = [
 		type: 'options',
 		noDataExpression: true,
 		options: [
-			{
-				name: 'Collect',
-				value: 'createCollection',
-				action: 'Collect character',
-				description: 'Collect a character',
-			},
-			{
-				name: 'Delete Collection',
-				value: 'deleteCollection',
-				action: 'Delete character collection',
-				description: 'Delete a character collection',
-			},
 			{
 				name: 'Get',
 				value: 'get',
@@ -65,6 +53,4 @@ export const description: INodeProperties[] = [
 	...getManyRelatedSubjectsProps,
 	...getManyRelatedPersonsProps,
 	...getImageProps,
-	...createCollectionProps,
-	...deleteCollectionProps,
 ];

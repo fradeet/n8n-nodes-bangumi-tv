@@ -7,8 +7,8 @@ import { properties as getImageProps } from './getImage.operation';
 import { properties as getManyRelatedPersonsProps } from './getManyRelatedPersons.operation';
 import { properties as getManyRelatedCharactersProps } from './getManyRelatedCharacters.operation';
 import { properties as getManyRelatedSubjectsProps } from './getManyRelatedSubjects.operation';
-import { properties as createOrUpdateCollectionProps } from './createOrUpdateCollection.operation';
-import { properties as updateCollectionProps } from './updateCollection.operation';
+// import { properties as createOrUpdateCollectionProps } from './createOrUpdateCollection.operation';
+// import { properties as updateCollectionProps } from './updateCollection.operation';
 
 export const description: INodeProperties[] = [
 	{
@@ -17,12 +17,6 @@ export const description: INodeProperties[] = [
 		type: 'options',
 		noDataExpression: true,
 		options: [
-			{
-				name: 'Collect or Update Collection',
-				value: 'createOrUpdateCollection',
-				action: 'Collect or update subject collection',
-				description: 'Collect a subject or update an existing collection',
-			},
 			{
 				name: 'Get',
 				value: 'get',
@@ -71,14 +65,8 @@ export const description: INodeProperties[] = [
 				action: 'Search subjects',
 				description: 'Search subjects by keyword',
 			},
-			{
-				name: 'Update Collection',
-				value: 'updateCollection',
-				action: 'Update existing subject collection',
-				description: 'Update an existing subject collection only',
-			},
 		],
-		default: 'getMany',
+		default: 'get',
 		displayOptions: { show: { resource: ['subject'] } },
 	},
 	...getCalendarProps,
@@ -89,6 +77,4 @@ export const description: INodeProperties[] = [
 	...getManyRelatedPersonsProps,
 	...getManyRelatedCharactersProps,
 	...getManyRelatedSubjectsProps,
-	...createOrUpdateCollectionProps,
-	...updateCollectionProps,
 ];
