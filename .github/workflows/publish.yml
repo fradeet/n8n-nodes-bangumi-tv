@@ -75,14 +75,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v6
         with:
-          node-version: 'lts/*'
-          cache: '{{packageManager.name}}'
+          version: 11
 
       - name: Install dependencies
-        run: '{{packageManager.name}} {{packageManager.installCommand}}'
+        run: pnpm install
 
       - name: Release
         # Publishes to npm with a provenance attestation (requires id-token: write above).
@@ -93,7 +92,7 @@ jobs:
         # Option B (token): set NPM_TOKEN in repo secrets — it is written to
         #   .npmrc here before publishing.
         run: |
-          [ -n "$NPM_TOKEN" ] && npm config set //registry.npmjs.org/:_authToken "$NPM_TOKEN"
-          {{packageManager.name}} run release
+          [ -n "$NPM_TOKEN" ] && pnpm config set //registry.npmjs.org/:_authToken "$NPM_TOKEN" && npm config set //registry.npmjs.org/:_authToken "$NPM_TOKEN"
+          pnpm run release
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
