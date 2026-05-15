@@ -17,30 +17,13 @@ export const properties: INodeProperties[] = [
 				preSend: [
 					async function (this: IExecuteSingleFunctions, requestOptions: IHttpRequestOptions) {
 						const keyword = this.getNodeParameter('keyword', 0) as string;
-						const nsfw = this.getNodeParameter('nsfw', 0) as boolean | undefined;
 						const body: Record<string, unknown> = { keyword };
-						if (nsfw !== undefined) {
-							body.filter = { nsfw };
-						}
 						requestOptions.body = body;
 						return requestOptions;
 					},
 				],
 			},
 		},
-		displayOptions: {
-			show: {
-				resource: ['character'],
-				operation: ['search'],
-			},
-		},
-	},
-	{
-		displayName: 'NSFW',
-		name: 'nsfw',
-		type: 'boolean',
-		default: false,
-		description: 'Whether to include NSFW results (requires permission)',
 		displayOptions: {
 			show: {
 				resource: ['character'],

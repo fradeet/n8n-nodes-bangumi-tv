@@ -18,16 +18,8 @@ export const properties: INodeProperties[] = [
 					async function (this: IExecuteSingleFunctions, requestOptions: IHttpRequestOptions) {
 						const keyword = this.getNodeParameter('keyword', 0) as string;
 						const sort = this.getNodeParameter('sort', 0) as string;
-						const filterJson = this.getNodeParameter('filter', 0) as string;
 						const body: Record<string, unknown> = { keyword };
 						if (sort) body.sort = sort;
-						if (filterJson) {
-							try {
-								body.filter = JSON.parse(filterJson);
-							} catch {
-								// ignore invalid JSON
-							}
-						}
 						requestOptions.body = body;
 						return requestOptions;
 					},
@@ -74,18 +66,5 @@ export const properties: INodeProperties[] = [
 			},
 		},
 		routing: { request: { qs: { offset: '={{$value}}' } } },
-	},
-	{
-		displayName: 'Filter (JSON)',
-		name: 'filter',
-		type: 'string',
-		default: '',
-		description: 'Optional JSON filter object (type, tag, air_date, rating, etc.)',
-		displayOptions: {
-			show: {
-				resource: ['subject'],
-				operation: ['search'],
-			},
-		},
 	},
 ];
