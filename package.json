@@ -4,8 +4,13 @@
   "description": "n8n community node for Bangumi.tv integration",
   "license": "MIT",
   "homepage": "https://github.com/fradeet/n8n-nodes-bangumi-tv",
-  "keywords": ["n8n-community-node-package"],
-  "author": { "name": "fradeet", "email": "fradeet.ye@outlook.com" },
+  "keywords": [
+    "n8n-community-node-package"
+  ],
+  "author": {
+    "name": "fradeet",
+    "email": "fradeet.ye@outlook.com"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/fradeet/n8n-nodes-bangumi-tv.git"
@@ -19,19 +24,27 @@
     "release": "n8n-node release",
     "prepublishOnly": "n8n-node prerelease"
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "n8n": {
     "n8nNodesApiVersion": 1,
     "strict": true,
-    "credentials": ["dist/credentials/BangumiTvOAuth2Api.credentials.js"],
-    "nodes": ["dist/nodes/BangumiTv/BangumiTv.node.js"]
+    "credentials": [
+      "dist/credentials/BangumiTvOAuth2Api.credentials.js"
+    ],
+    "nodes": [
+      "dist/nodes/BangumiTv/BangumiTv.node.js"
+    ]
   },
   "devDependencies": {
-    "@n8n/node-cli": "^0.23.1",
+    "@n8n/node-cli": "^0.30.1",
     "eslint": "9.32.0",
     "prettier": "3.6.2",
     "release-it": "^19.0.4",
     "typescript": "5.9.2"
   },
-  "peerDependencies": { "n8n-workflow": "*" }
+  "peerDependencies": {
+    "n8n-workflow": "*"
+  }
 }
